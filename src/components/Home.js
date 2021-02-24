@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import Navbar from './Navbar'
 import { useTransition, animated } from 'react-spring'
 import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons'
 import ArrowSVG from './images/ArrowSVG'
 
 function Home() {
+
+  const [page, setPage] = useState(0)
 
   let prevScroll = window.pageYOffset
 
@@ -18,6 +19,25 @@ function Home() {
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
+
+  useEffect(() => {
+    switch (page) {
+      case 0:
+        parallax.scrollTo(0)
+        break;
+
+      case 1:
+        parallax.scrollTo(1)
+        break;
+
+      case 2:
+        parallax.scrollTo(2)
+        break;
+
+      default:
+        break;
+    }
+  }, [page])
 
   console.log("yes")
   function handleScroll() {
@@ -33,8 +53,30 @@ function Home() {
     enter: { opacity: 1, transform: 'translate3d(0, 0, 0)' }
   })
 
+  const underlineTransition = useTransition(page, null, {
+    from: { opacity: 0 },
+    enter: { opacity: 1 }
+  })
+
   return (
     <div className="text-white">
+      {/* Side navigation */}
+      <div className="absolute z-10 top-1/2 ml-1/2 flex h-8 ml-4 -mt-6 flex-row transform-origin-top-left -translate-x-1/2 transform rotate-90 text-center" style={{ width: '100vh' }}>
+        <button className={`relative w-full text-xs text-center tracking-widest focus:outline-none
+        ${page === 0 ? "text-white" : "text-gray-500"}`}
+          onClick={() => setPage(0)}>Home
+          <div class={`${page === 0 ? "underline" : ""}`} /></button>
+        <button className={`relative w-full text-xs text-center tracking-widest focus:outline-none
+        ${page === 1 ? "text-white" : "text-gray-500"}`}
+          onClick={() => setPage(1)}>About
+          <div class={`${page === 1 ? "underline" : ""}`} /></button>
+        <button className={`relative w-full text-xs text-center tracking-widest focus:outline-none
+        ${page === 2 ? "text-white" : "text-gray-500"}`}
+          onClick={() => setPage(2)}>Projects
+          <div class={`${page === 2 ? "underline" : ""}`} /></button>
+      </div>
+
+
       <Parallax pages={3} scrolling={false} ref={ref => parallax = ref}>
 
         {/* Child layers */}
@@ -62,7 +104,6 @@ function Home() {
         {/* Layer 1 */}
         <ParallaxLayer offset={0} speed={0.1}>
           <div className="flex flex-col w-full h-full">
-            <Navbar parallax={parallax} />
             {transition.map(({ item, key, props }) =>
               item &&
               <animated.div key={key} style={props} className="flex flex-col h-min w-min text-8xl font-semibold my-auto mx-auto">
@@ -70,7 +111,7 @@ function Home() {
                 <p id="realistic-marker-highlight" className="relative mx-auto w-min whitespace-nowrap transform hover:scale-105 ease-in-out duration-300">Luke Sutor.</p>
               </animated.div>
             )}
-            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 mx-auto p-4 transform hover:scale-125 ease-in-out duration-300" onClick={() => parallax.scrollTo(1)}>
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 mx-auto p-4 transform hover:scale-125 ease-in-out duration-300" onClick={() => setPage(1)}>
               <ArrowSVG />
             </div>
           </div>
@@ -84,10 +125,10 @@ function Home() {
               <p className="text-gray-300">Hey there! I'm Luke Sutor, a student currently attending Suncoast Community High School. When I'm not coding I enjoy going to the gym,
             shooting hoops, and playing my Fender Strat.</p>
             </div>
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 mx-auto p-4 rotate-180 transform hover:scale-125 ease-in-out duration-300" onClick={() => parallax.scrollTo(0)}>
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 mx-auto p-4 rotate-180 transform hover:scale-125 ease-in-out duration-300" onClick={() => setPage(0)}>
               <ArrowSVG />
             </div>
-            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 mx-auto p-4 transform hover:scale-125 ease-in-out duration-300" onClick={() => parallax.scrollTo(3)}>
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 mx-auto p-4 transform hover:scale-125 ease-in-out duration-300" onClick={() => setPage(2)}>
               <ArrowSVG />
             </div>
           </div>
@@ -110,7 +151,7 @@ function Home() {
               </ParallaxLayer>
 
             </Parallax>
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 mx-auto p-4 rotate-180 transform hover:scale-125 ease-in-out duration-300" onClick={() => parallax.scrollTo(1)}>
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 mx-auto p-4 rotate-180 transform hover:scale-125 ease-in-out duration-300" onClick={() => setPage(1)}>
               <ArrowSVG />
             </div>
           </div>
@@ -125,7 +166,10 @@ function Home() {
           </filter>
         </defs>
       </svg>
+
+
     </div>
+
   );
 }
 
