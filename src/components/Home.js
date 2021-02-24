@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED } from 'react-dom'
 import { useTransition, animated } from 'react-spring'
 import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons'
 import ArrowSVG from './images/ArrowSVG'
@@ -11,41 +12,60 @@ function Home() {
 
   let parallax, horizontalParallax
 
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+  // useEffect(() => {
+  //   window.addEventListener('wheel', handleWheel);
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  //   return () => {
+  //     window.removeEventListener('wheel', handleWheel);
+  //   };
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, [])
 
   useEffect(() => {
     switch (page) {
       case 0:
         parallax.scrollTo(0)
         break;
-
       case 1:
         parallax.scrollTo(1)
         break;
-
       case 2:
         parallax.scrollTo(2)
         break;
-
       default:
         break;
     }
   }, [page])
 
-  console.log("yes")
-  function handleScroll() {
-    console.log(window.pageYOffset)
-    if (window.pageYOffset > 10) {
-      console.log("testing")
-    }
-  }
+  // function handleWheel(e) {
+  //   if(e.deltaY > 0) {
+  //     // scroll down
+  //     switch (page) {
+  //       case 0:
+  //         console.log(1)
+  //         setPage(1)
+  //         console.log(page + " page")
+  //         break;
+  //       case 1:
+  //         console.log(2)
+  //         break;
+  //       default:
+  //         break;
+  //     }
+  //   } else {
+  //     // Scroll up
+  //     switch (page) {
+  //       case 1:
+  //         console.log(0)
+  //         break;
+  //       case 2:
+  //         console.log(1)
+  //         break;
+  //       default:
+  //         break;
+  //     }
+  //   }
+  // }
 
   const transition = useTransition(true, null, {
     config: { mass: 1, tension: 10, friction: 5 },
@@ -77,7 +97,7 @@ function Home() {
       </div>
 
 
-      <Parallax pages={3} scrolling={false} ref={ref => parallax = ref}>
+      <Parallax pages={3} scrolling={true} ref={ref => parallax = ref}>
 
         {/* Child layers */}
         <ParallaxLayer offset={1.8} factor={2} speed={2}>
@@ -119,7 +139,7 @@ function Home() {
 
         {/* Layer 2 */}
         <ParallaxLayer offset={1} speed={0.1}>
-          <div className="flex w-full h-full bg-gray-900 bg-opacity-50">
+          <div className="flex w-full h-full">
             <div className="flex flex-col w-2/3 h-min my-auto mx-auto">
               <p className="text-6xl font-semibold mb-8">About</p>
               <p className="text-gray-300">Hey there! I'm Luke Sutor, a student currently attending Suncoast Community High School. When I'm not coding I enjoy going to the gym,
@@ -137,20 +157,7 @@ function Home() {
         {/* Layer 3 */}
         <ParallaxLayer offset={2} speed={0.1}>
           <div className="flex flex-col w-1/2 h-full">
-            <Parallax pages={3} horizontal ref={ref => horizontalParallax = ref}>
-              <ParallaxLayer offset={0} factor={0.5} speed={0.1}>
-                <p>P1</p>
-              </ParallaxLayer>
-
-              <ParallaxLayer offset={1} factor={0.5} speed={0.1}>
-                <p>P2</p>
-              </ParallaxLayer>
-
-              <ParallaxLayer offset={2} factor={0.5} speed={0.1}>
-                <p>P3</p>
-              </ParallaxLayer>
-
-            </Parallax>
+            <p>Projects</p>
             <div className="absolute top-0 left-1/2 -translate-x-1/2 mx-auto p-4 rotate-180 transform hover:scale-125 ease-in-out duration-300" onClick={() => setPage(1)}>
               <ArrowSVG />
             </div>
@@ -167,7 +174,37 @@ function Home() {
         </defs>
       </svg>
 
-
+      <script>
+        {window.addEventListener('wheel', function (e) {
+          if (e.deltaY > 0) {
+            // scroll down
+            // switch (page) {
+            //   case 0:
+            //     setPage(1)
+            //     break;
+            //   case 1:
+            //     setPage(2)
+            //     break;
+            //   default:
+            //     break;
+            // }
+          }
+          // } else {
+          //   // Scroll up
+          //   switch (page) {
+          //     case 1:
+          //       setPage(0)
+          //       break;
+          //     case 2:
+          //       setPage(1)
+          //       break;
+          //     default:
+          //       break;
+          //   }
+          // }
+        })
+        }
+      </script>
     </div>
 
   );
