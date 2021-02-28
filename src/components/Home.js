@@ -33,7 +33,7 @@ function Home(props) {
         )}
       </div>
       <div class="mouse" >
-        <p className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-xs text-gray-600 tracking-widest">Scroll</p>
+        <p className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-xs text-gray-500 tracking-wide">Scroll</p>
       </div>
     </div>
   );

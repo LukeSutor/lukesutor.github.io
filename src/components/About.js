@@ -14,6 +14,8 @@ const transReact = (x, y) => `translate3d(${-x / 80}px,${y / 32}px,0)`
 
 function About(props) {
 
+  const { page } = props
+
   const [visible, setVisible] = useState(false)
 
   const [animateProps, set] = useSpring(() => ({ xy: [0, 0], config: { mass: 10, tension: 550, friction: 140 } }))
@@ -26,19 +28,23 @@ function About(props) {
     if (inView) {
       setVisible(true)
       props.parentCallBack(1)
+    } else if(page === 0) {
+      setVisible(false)
     }
-  }, [inView])
+  }, [inView, page])
 
   const aboutTransition = useTransition(visible, null, {
     config: { mass: 1, tension: 20, friction: 10 },
     from: { opacity: 0, transform: 'translate3d(10%, 0, 0)' },
-    enter: { opacity: 1, transform: 'translate3d(0, 0, 0)' }
+    enter: { opacity: 1, transform: 'translate3d(0, 0, 0)' },
+    leave: { position: 'absolute', opacity: 0, transform: 'translate3d(0, -100%, 0)' }
   })
 
   const wordTransition = useTransition(visible, null, {
     config: { duration: 1500 },
     from: { opacity: 0 },
-    enter: { opacity: 1 }
+    enter: { opacity: 1 },
+    leave: { opacity: 0, transform: 'translate3d(0, -100%, 0)' }
   })
 
   return (
@@ -49,9 +55,9 @@ function About(props) {
           {aboutTransition.map(({ item, key, props }) =>
             item &&
             <animated.p key={key} style={props} className="text-lg text-gray-300">Hey there! I'm Luke Sutor, a 17 year-old junior at Suncoast Community High School in Riviera Beach, Florida.
-            I got involved in coding when I enrolled in the CS program at my school, and have been working on projects ever since.
+            I got involved in programming when I enrolled in the CS program at my school, and have been working on projects ever since.
             The technologies I work with are Javascript (React), Python, Java, and SQL.
-            When I'm not coding I enjoy going to the gym, shooting hoops, and playing my Fender Strat.</animated.p>
+            When I'm not programming I enjoy going to the gym, shooting hoops, and playing my Fender Strat.</animated.p>
           )}
         </div>
       </div>

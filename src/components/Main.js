@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { useTransition, animated } from 'react-spring'
 import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons'
-import { useInView } from 'react-intersection-observer'
 import Home from './Home'
 import About from './About'
-import ArrowSVG from './images/ArrowSVG'
+import Projects from './Projects'
+import AboutWord from './AboutWord'
 
 function Main() {
 
@@ -23,8 +23,8 @@ function Main() {
   }
 
   function page2() {
-    setPage(2)
-    parallax.scrollTo(2)
+    setPage(3)
+    parallax.scrollTo(3)
   }
 
   function handleCallback(page) {
@@ -56,15 +56,7 @@ function Main() {
             <div class={`${page === 2 ? "underline" : ""}`} /></button>
       </div>
 
-      <Parallax pages={3} scrolling={true} ref={ref => parallax = ref}>
-
-        <ParallaxLayer offset={1} speed={-0.2}>
-          <div className="flex w-full h-full">
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-min h-min leading-none" style={{ zIndex: -1 }}>
-              <animated.p style={{ fontSize: '65vh', fontFamily: 'Century Gothic', color: '#0a0a0a' }}>ABOUT</animated.p>
-            </div>
-          </div>
-        </ParallaxLayer>
+      <Parallax pages={5} scrolling={true} ref={ref => parallax = ref}>
 
         {/* Layer 1 // Home */}
         <ParallaxLayer offset={0} speed={0.1}>
@@ -74,18 +66,29 @@ function Main() {
         </ParallaxLayer>
 
         {/* Layer 2 // About */}
-        <ParallaxLayer offset={1} speed={0.1}>
-          <div className="flex w-full h-full">
-            <About parentCallBack={handleCallback} />
+        <ParallaxLayer offset={1} speed={0.2}>
+        <div className="flex w-full h-full">
+            <AboutWord parentCallBack={handleCallback} />
           </div>
         </ParallaxLayer>
 
-        {/* Layer 3 // Statbreak */}
         <ParallaxLayer offset={2} speed={0.1}>
-          <div className="flex flex-col h-full">
-            <p>Projects</p>
+          <div className="flex w-full h-full">
+            <About parentCallBack={handleCallback} page={page}/>
           </div>
         </ParallaxLayer>
+
+        {/* Layer 3 // Projects */}
+        <ParallaxLayer offset={3} speed={0.2}>
+          <div className="flex w-full h-full">
+            <Projects parentCallBack={handleCallback} />
+          </div>
+        </ParallaxLayer>
+
+        <ParallaxLayer offset={4} speed={0.1}>
+          <p>Statbreak</p>
+        </ParallaxLayer>
+
       </Parallax>
       <svg xmlns="//www.w3.org/2000/svg" version="1.1" class="svg-filters" style={{ display: 'none' }}>
         <defs>
