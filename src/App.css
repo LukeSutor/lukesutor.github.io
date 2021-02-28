@@ -19,14 +19,6 @@ body {
   animation: animateHighlight 2s forwards ease;
 }
 
-.underline {
-  position: absolute;
-  bottom: 0;
-  height: 2px;
-  background-color: white;
-  animation: animateUnderline 1s forwards ease;
-}
-
 @keyframes animateHighlight {
   from {
     width: 0;
@@ -34,6 +26,14 @@ body {
   to {
     width: 110%
   }
+}
+
+.underline {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  background-color: white;
+  animation: animateUnderline 1s forwards ease;
 }
 
 @keyframes animateUnderline {
@@ -45,6 +45,42 @@ body {
   }
 }
 
-#test {
-  transform: rotate(40def);
+.mouse {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+	width: 1.3em;
+	height: 2.3em;
+	border: 2px solid white;
+	border-radius: 60px;
+}
+
+.mouse::before {
+  content: '';
+  width: 4px;
+  height: 4px;
+  position: absolute;
+  top: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  border-radius: 50%;
+  opacity: 1;
+  animation: wheel 2s infinite;
+  -webkit-animation: wheel 2s infinite;
+}
+
+@keyframes wheel {
+	to {
+		opacity: 0;
+		top: 30px;
+	}
+}
+
+@-webkit-keyframes wheel {
+	to {
+		opacity: 0;
+		top: 40px;
+	}
 }
