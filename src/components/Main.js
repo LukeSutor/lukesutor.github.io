@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import { useTransition, animated } from 'react-spring'
 import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons'
 import Home from './Home'
+import AboutWord from './AboutWord'
 import About from './About'
 import Projects from './Projects'
-import AboutWord from './AboutWord'
+import Statbreak from './Statbreak'
 
 function Main() {
 
@@ -30,12 +30,6 @@ function Main() {
   function handleCallback(page) {
     setPage(page)
   }
-
-  const transition = useTransition(true, null, {
-    config: { mass: 1, tension: 10, friction: 5 },
-    from: { opacity: 0, transform: 'translate3d(0, 30px, 0)' },
-    enter: { opacity: 1, transform: 'translate3d(0, 0, 0)' }
-  })
 
   return (
     <div className="text-white">
@@ -67,26 +61,30 @@ function Main() {
 
         {/* Layer 2 // About */}
         <ParallaxLayer offset={1} speed={0.2}>
-        <div className="flex w-full h-full">
+          <div className="flex w-full h-full">
             <AboutWord parentCallBack={handleCallback} />
           </div>
         </ParallaxLayer>
 
+        {/* Layer 3 // About Paragraph */}
         <ParallaxLayer offset={2} speed={0.1}>
           <div className="flex w-full h-full">
-            <About parentCallBack={handleCallback} page={page}/>
+            <About parentCallBack={handleCallback} page={page} />
           </div>
         </ParallaxLayer>
 
-        {/* Layer 3 // Projects */}
+        {/* Layer 4 // Projects */}
         <ParallaxLayer offset={3} speed={0.2}>
           <div className="flex w-full h-full">
             <Projects parentCallBack={handleCallback} />
           </div>
         </ParallaxLayer>
 
+        {/* Layer 5 // Statbreak */}
         <ParallaxLayer offset={4} speed={0.1}>
-          <p>Statbreak</p>
+          <div className="flex w-full h-full">
+            <Statbreak parentCallBack={handleCallback} page={page} />
+          </div>
         </ParallaxLayer>
 
       </Parallax>
