@@ -31,8 +31,9 @@ function Home(props) {
             <p id="realistic-marker-highlight" className="relative mx-auto w-min whitespace-nowrap transform hover:scale-105 ease-in-out duration-300">Luke Sutor.</p>
           </animated.div>
         )}
+        <button onClick={props.page2} className="w-min mx-auto mb-auto py-2 px-4 text-xl font-semibold rounded-lg bg-blue-600 whitespace-nowrap focus:outline-none">View My Work</button>
       </div>
-      <div class="mouse" >
+      <div class="mouse" onClick={props.page1} >
         <p className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-xs text-gray-500 tracking-wide">Scroll</p>
       </div>
     </div>

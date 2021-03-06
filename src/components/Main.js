@@ -55,7 +55,7 @@ function Main() {
         {/* Layer 1 // Home */}
         <ParallaxLayer offset={0} speed={0.1}>
           <div className="flex w-full h-full">
-            <Home parentCallBack={handleCallback} />
+            <Home parentCallBack={handleCallback} page1={page1} page2={page2}/>
           </div>
         </ParallaxLayer>
 

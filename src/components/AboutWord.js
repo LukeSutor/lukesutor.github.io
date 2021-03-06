@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react'
 import { useTransition, animated } from 'react-spring'
 import { useInView } from 'react-intersection-observer'
+import DownArrow from './images/DownArrow'
 
 function AboutWord(props) {
 
   const { ref, inView, entry } = useInView({
-    threshold: 0.6
+    threshold: 0.51
   })
 
   useEffect(() => {
@@ -31,6 +32,7 @@ function AboutWord(props) {
           </animated.svg>
         )}
       </div>
+      <DownArrow />
     </div>
   );
 }

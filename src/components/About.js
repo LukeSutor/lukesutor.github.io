@@ -21,7 +21,7 @@ function About(props) {
   const [animateProps, set] = useSpring(() => ({ xy: [0, 0], config: { mass: 10, tension: 550, friction: 140 } }))
 
   const { ref, inView, entry } = useInView({
-    threshold: 0.6
+    threshold: 0.51
   })
 
   useEffect(() => {
@@ -54,7 +54,7 @@ function About(props) {
         <div className="flex flex-col w-2/3 mx-auto my-auto">
           {aboutTransition.map(({ item, key, props }) =>
             item &&
-            <animated.p key={key} style={props} className="text-lg text-gray-300">Hey there! I'm Luke Sutor, a 17 year-old junior at Suncoast Community High School in Riviera Beach, Florida.
+            <animated.p key={key} style={props} className="text-lg text-gray-300 font-light">Hey there! I'm Luke Sutor, a 17 year-old junior at Suncoast Community High School in Riviera Beach, Florida.
             I got involved in programming when I enrolled in the CS program at my school, and have been working on projects ever since.
             The technologies I work with are Javascript (React), Python, Java, and SQL.
             When I'm not programming I enjoy going to the gym, shooting hoops, and playing my Fender Strat.</animated.p>
