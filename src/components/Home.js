@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { useTransition, animated } from 'react-spring'
+import { useTransition, useSpring, animated } from 'react-spring'
 import { useInView } from 'react-intersection-observer'
 
 
@@ -7,7 +7,7 @@ function Home(props) {
 
   const transition = useTransition(true, null, {
     config: { mass: 1, tension: 10, friction: 5 },
-    from: { opacity: 0, transform: 'translate3d(0, 30px, 0)' },
+    from: { opacity: 0, transform: 'translate3d(0, 25%, 0)' },
     enter: { opacity: 1, transform: 'translate3d(0, 0, 0)' }
   })
 
@@ -22,16 +22,15 @@ function Home(props) {
   }, [inView])
 
   return (
-    <div ref={ref} className="w-full h-full">
+    <div ref={ref} className="w-full h-screen">
       <div className="flex flex-col w-full h-full">
         {transition.map(({ item, key, props }) =>
           item &&
-          <animated.div key={key} style={props} className="flex flex-col h-min w-min text-8xl font-semibold my-auto mx-auto">
+          <animated.div key={key} style={props} className="flex flex-col h-min w-min text-9xl font-semibold my-auto mx-auto">
             <p className="whitespace-nowrap inline-flex">Hello 👋 I'm</p>
             <p id="realistic-marker-highlight" className="relative mx-auto w-min whitespace-nowrap transform hover:scale-105 ease-in-out duration-300">Luke Sutor.</p>
           </animated.div>
         )}
-        <button onClick={props.page2} className="w-min mx-auto mb-auto py-2 px-4 text-xl font-semibold rounded-lg bg-blue-600 whitespace-nowrap focus:outline-none">View My Work</button>
       </div>
       <div class="mouse" onClick={props.page1} >
         <p className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-xs text-gray-500 tracking-wide">Scroll</p>

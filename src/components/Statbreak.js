@@ -49,7 +49,7 @@ function Statbreak(props) {
   const [hoverAnimation, set] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 5, tension: 350, friction: 40 } }))
 
   return (
-    <div ref={ref} className="w-full h-full">
+    <div ref={ref} className="w-full h-screen mt-12">
       <div className="flex flex-row justify-evenly w-full h-full mx-8">
         <div className="flex flex-col justify-between w-min my-auto" style={{ height: '60vh' }}>
           <animated.div style={titleTransition} className="flex flex-row text-6xl font-semibold">
