@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useSpring, useTransition, useTrail, animated } from 'react-spring'
+import { useSpring, useTrail, animated } from 'react-spring'
 import { useInView } from 'react-intersection-observer'
 
 function About(props) {
@@ -9,7 +9,7 @@ function About(props) {
   const [visible, setVisible] = useState(false)
 
   const { ref, inView, entry } = useInView({
-    threshold: 0.51
+    threshold: 0.8
   })
 
   useEffect(() => {
@@ -20,13 +20,6 @@ function About(props) {
       setVisible(false)
     }
   }, [inView, page])
-
-  const wordTransition = useTransition(visible, null, {
-    config: { duration: 1500 },
-    from: { opacity: 0 },
-    enter: { opacity: 1 },
-    leave: { opacity: 0, transform: 'translate3d(0, -100%, 0)' }
-  })
 
   const headerTransition = useSpring({
     config: { mass: 1, tension: 20, friction: 10 },
@@ -44,12 +37,12 @@ function About(props) {
 
   // HTML saved in an array to use for the Trail transition on page scrolls
   const languagesHTML = [
-    <p className="py-1 px-2 rounded-md w-min" style={{ backgroundColor: '#200dd8' }}>Javascript</p>,
-    <p className="bg-blue-600 py-1 px-2 rounded-md w-min">HTML</p>,
-    <p className="py-1 px-2 rounded-md w-min" style={{ backgroundColor: '#9039FF' }}>CSS</p>,
-    <p className="py-1 px-2 rounded-md w-min" style={{ backgroundColor: '#F147F0' }}>React</p>,
-    <p className="py-1 px-2 rounded-md w-min" style={{ backgroundColor: '#FF6E6B' }}>Java</p>,
-    <p className="py-1 px-2 rounded-md w-min" style={{ backgroundColor: '#FF9F5A' }}>Python</p>
+    <p className="py-1 px-1 md:px-2 rounded-md w-min" style={{ backgroundColor: '#200dd8' }}>Javascript</p>,
+    <p className="bg-blue-600 py-1 px-1 md:px-2 rounded-md w-min">HTML</p>,
+    <p className="py-1 px-1 md:px-2 rounded-md w-min" style={{ backgroundColor: '#9039FF' }}>CSS</p>,
+    <p className="py-1 px-1 md:px-2 rounded-md w-min" style={{ backgroundColor: '#F147F0' }}>React</p>,
+    <p className="py-1 px-1 md:px-2 rounded-md w-min" style={{ backgroundColor: '#FF6E6B' }}>Java</p>,
+    <p className="py-1 px-1 md:px-2 rounded-md w-min" style={{ backgroundColor: '#FF9F5A' }}>Python</p>
   ]
 
   // Trail used for languages listed under paragraph
@@ -65,17 +58,17 @@ function About(props) {
 
   return (
     <div ref={ref} className="w-screen h-full">
-      <div className="flex flex-row w-full h-full pt-32 pb-20" style={{ backgroundColor: '#101010' }}>
-        <div className="flex flex-col w-1/2 mx-auto my-auto">
-          <animated.p style={headerTransition} className="mb-8 ml-6 text-5xl text-white font-semibold whitespace-nowrap">I build
+      <div className="flex flex-row w-full h-full pt-20 md:pt-32 pb-20" style={{ backgroundColor: '#101010' }}>
+        <div className="flex flex-col w-full md:w-2/3 lg:w-1/2 mx-auto my-auto">
+          <animated.p style={headerTransition} className="mb-8 ml-10 md:ml-6 text-2xl md:text-4xl lg:text-5xl text-white font-semibold whitespace-nowrap">I build
           <span className="text-blue-600"> websites</span> and <br /><span className="text-blue-600">software solutions</span>.</animated.p>
-          <animated.div className="rounded-lg bg-gray-200" style={aboutTransition}>
-            <animated.p className="my-4 mx-6 text-xl text-gray-200 font-light">Hey there! I'm Luke Sutor, a 17 year-old
+          <animated.div style={aboutTransition} className="rounded-lg mx-4 md:mx-0">
+            <animated.p className="my-4 mx-6 text-base md:text-xl text-gray-200 font-light">Hey there! I'm Luke Sutor, a 17 year-old
             junior at Suncoast Community High School in Palm Beach County, Florida.
             I started programming when I enrolled in the CS program at my school, and have been creating projects ever since.
             When I'm not programming I enjoy going to the gym, shooting hoops, and playing my Fender Strat.</animated.p>
           </animated.div>
-          <div className="flex flex-row justify-around mt-4" style={{ fontFamily: 'Consolas' }}>
+          <div className="flex flex-row justify-around mt-4 text-xs md:text-sm lg:text-base" style={{ fontFamily: 'Consolas' }}>
             {trail.map((props, i) => <animated.div key={languagesHTML[i]} style={props} >{languagesHTML[i]}</animated.div>)}
           </div>
         </div>
