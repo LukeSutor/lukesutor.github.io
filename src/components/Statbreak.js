@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useSpring, animated } from 'react-spring'
+import { useSpring, useTransition, animated } from 'react-spring'
 import { useInView } from 'react-intersection-observer'
 import statbreak from './images/statbreak.png'
 import Github from './images/Github'
@@ -30,27 +30,27 @@ function Statbreak(props) {
   const titleTransition = useSpring({
     config: { mass: 1, tension: 20, friction: 10 },
     opacity: visible ? 1 : 0,
-    transform: visible ? 'translate3d(0, 0, 0)' : 'translate3d(-50%, 0, 0)'
+    transform: visible ? 'translate3d(0, 0, 0)' : 'translate3d(0, 25px, 0)'
   })
 
   const descriptionTransition = useSpring({
     config: { mass: 1, tension: 20, friction: 10 },
-    delay: 250,
     opacity: visible ? 1 : 0,
-    transform: visible ? 'translate3d(0, 0, 0)' : 'translate3d(-50%, 0, 0)'
+    transform: visible ? 'translate3d(0, 0, 0)' : 'translate3d(0, 25px, 0)',
+    delay: 250
   })
 
   const linkTransition = useSpring({
-    config: { mass: 1, tension: 20, friction: 7 },
-    delay: 750,
-    transform: visible ? 'scale(1)' : 'scale(0)'
+    config: { mass: 1, tension: 10, friction: 5 },
+    transform: visible ? 'scale(1)' : 'scale(0)',
+    delay: 500
   })
 
   const [hoverAnimation, set] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 5, tension: 350, friction: 40 } }))
 
   return (
-    <div ref={ref} className="w-full h-screen mt-12">
-      <div className="flex flex-row justify-evenly w-full h-full mx-8">
+    <div ref={ref} className="h-screen mt-12">
+      <div className="flex flex-row justify-evenly w-full h-full px-8">
         <div className="flex flex-col justify-between w-min my-auto" style={{ height: '60vh' }}>
           <animated.div style={titleTransition} className="flex flex-row text-6xl font-semibold">
             <p>Statbreak</p>

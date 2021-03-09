@@ -16,11 +16,12 @@ function ProjectsWord(props) {
 
   const transition = useSpring({
     config: { mass: 1, tension: 40, friction: 1, clamp: true },
-    transform: `translate3d(${props.scroll / 2 + 600}px, 0, 0)`
+    // transform: `translate3d(${props.scroll / 2 + 600}px, 0, 0)`,
+    marginLeft: `${props.scroll / 2 + 600}px`
   })
 
   return (
-    <div ref={ref} className="w-full h-full">
+    <div ref={ref} className="w-full h-full overflow-hidden">
       <div className="w-full h-full my-20 leading-none" style={{ zIndex: -1 }}>
         <animated.svg style={transition} width="100%" viewBox="0 0 293 45" fill="none" xmlns="http://www.w3.org/2000/svg" 
         className="w-5/6 h-full mx-auto my-auto">

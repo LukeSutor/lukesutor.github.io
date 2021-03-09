@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { useTrail, animated } from 'react-spring'
 import Home from './Home'
 import AboutWord from './AboutWord'
 import About from './About'
@@ -26,7 +27,7 @@ function Main() {
   }
 
   return (
-    <div className="text-white w-screen">
+    <div className="text-white overflow-x-hidden" >
 
       {/* Layer 1 // Home */}
       <Home parentCallBack={handleCallback} />
