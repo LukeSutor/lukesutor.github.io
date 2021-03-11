@@ -30,7 +30,8 @@ function Statbreak(props) {
   const titleTransition = useSpring({
     config: { mass: 1, tension: 20, friction: 10 },
     opacity: visible ? 1 : 0,
-    transform: visible ? 'translate3d(0, 0, 0)' : 'translate3d(0, 25px, 0)'
+    transform: visible ? 'translate3d(0, 0, 0)' : 'translate3d(0, 25px, 0)',
+    delay: 100
   })
 
   const descriptionTransition = useSpring({
@@ -41,7 +42,7 @@ function Statbreak(props) {
   })
 
   const linkTransition = useSpring({
-    config: { mass: 1, tension: 10, friction: 5 },
+    config: { mass: 1, tension: 10, friction: 4 },
     transform: visible ? 'scale(1)' : 'scale(0)',
     delay: 500
   })
@@ -59,10 +60,10 @@ function Statbreak(props) {
   const [hoverAnimation, set] = useSpring(() => ({ xy: [0, 0], config: { mass: 5, tension: 350, friction: 40 } }))
 
   return (
-    <div ref={ref} className="mt-12 mb-20">
+    <div ref={ref} className="mt-12 mb-40">
       <div className="flex flex-col md:flex-row justify-evenly w-full h-full px-4 md:px-8">
         <div className="flex flex-col justify-center w-3/4 md:w-min mx-auto my-auto">
-          <animated.div style={titleTransition} className="flex flex-row mb-6 text-3xl md:text-4xl lg:text-6xl font-semibold">
+          <animated.div style={titleTransition} className="flex flex-row mb-6 text-4xl md:text-5xl lg:text-6xl font-semibold">
             <p>Statbreak</p>
             <p className="ml-8 animate-bounce">🏀</p>
           </animated.div>
@@ -74,7 +75,7 @@ function Statbreak(props) {
               <p className="pl-2 md:pl-4">Site</p>
             </animated.a>
             <animated.a href="https://github.com/LukeSutor/React-Basketball-Site" target="_blank" style={linkTransition} className="flex flex-row bg-white my-auto px-2 md:px-3 lg:px-4 py-1 lg:py-2 rounded-md hover:bg-gray-200 w-min">
-            <div className="h-4 md:h-5 lg:h-6 w-4 md:w-5 lg:w-6 mx-auto my-auto"><Github /></div>
+            <div className="h-4 md:h-5 lg:h-7 w-4 md:w-5 lg:w-7 mx-auto my-auto"><Github /></div>
               <p className="pl-2 md:pl-3 lg:pl-4">Github</p>
             </animated.a>
           </div>

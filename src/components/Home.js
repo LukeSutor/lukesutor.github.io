@@ -40,7 +40,7 @@ function Home(props) {
       </div>
       {scrollTransition.map(({ item, key, props }) =>
         item &&
-        <animated.div key={key} style={props} class="mouse">
+        <animated.div key={key} style={props} className="mouse">
           <p className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-xs text-gray-500 tracking-wide">Scroll</p>
         </animated.div>
       )}

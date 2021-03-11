@@ -69,7 +69,7 @@ function About(props) {
             When I'm not programming I enjoy going to the gym, shooting hoops, and playing my Fender Strat.</animated.p>
           </animated.div>
           <div className="flex flex-row justify-around mt-4 text-xs md:text-sm lg:text-base" style={{ fontFamily: 'Consolas' }}>
-            {trail.map((props, i) => <animated.div key={languagesHTML[i]} style={props} >{languagesHTML[i]}</animated.div>)}
+            {trail.map((props, i) => <animated.div key={i} style={props} >{languagesHTML[i]}</animated.div>)}
           </div>
         </div>
       </div>
