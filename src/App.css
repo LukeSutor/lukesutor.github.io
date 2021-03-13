@@ -93,6 +93,6 @@ body {
 }
 
 .link{
-  background: linear-gradient(148deg, #9039ff 7%, #f147f0 41%, #ff6e6b 93%);
+  background: linear-gradient(148deg, rgba(144,57,255,1) 7%, rgba(241,71,240,1) 41%, rgba(255,110,107,1) 93%);
   white-space: nowrap;
 }
