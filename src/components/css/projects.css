@@ -1,0 +1,55 @@
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.overlay:hover {
+  background-color: rgba(0, 0, 0, 0.25);
+  -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -o-transition: all 250ms ease;
+  -ms-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+
+.link-container {
+  position: absolute;
+  right: 1.5em;
+  bottom: 1em;
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+
+.link {
+  width: 3em;
+  height: 3em;
+  padding: 0.5em;
+  border-style: solid white;
+  border-width: 3px;
+  border-color: white;
+  border-radius: 100%;
+  opacity: 0;
+}
+
+.overlay:hover .link {
+  opacity: 100;
+  -webkit-transition: opacity 500ms ease;
+  -moz-transition: opacity 500ms ease;
+  -o-transition: opacity 500ms ease;
+  -ms-transition: opacity 500ms ease;
+  transition: opacity 500ms ease;
+}
+
+.overlay:hover .link:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+@keyframes darken {
+  to {
+    background-color: rgba(0, 0, 0, 0.25)
+  }
+}

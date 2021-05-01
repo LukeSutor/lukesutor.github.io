@@ -37,12 +37,12 @@ function About(props) {
 
   // HTML saved in an array to use for the Trail transition on page scrolls
   const languagesHTML = [
-    <p className="py-1 px-1 md:px-2 rounded-md w-min" style={{ backgroundColor: '#200dd8' }}>Javascript</p>,
-    <p className="bg-blue-600 py-1 px-1 md:px-2 rounded-md w-min">HTML</p>,
-    <p className="py-1 px-1 md:px-2 rounded-md w-min" style={{ backgroundColor: '#9039FF' }}>CSS</p>,
-    <p className="py-1 px-1 md:px-2 rounded-md w-min" style={{ backgroundColor: '#F147F0' }}>React</p>,
-    <p className="py-1 px-1 md:px-2 rounded-md w-min" style={{ backgroundColor: '#FF6E6B' }}>Java</p>,
-    <p className="py-1 px-1 md:px-2 rounded-md w-min" style={{ backgroundColor: '#FF9F5A' }}>Python</p>
+    <code className="py-1 px-1 md:px-2 rounded-md w-min" style={{ backgroundColor: '#200dd8' }}>Javascript</code>,
+    <code className="bg-blue-600 py-1 px-1 md:px-2 rounded-md w-min">HTML</code>,
+    <code className="py-1 px-1 md:px-2 rounded-md w-min" style={{ backgroundColor: '#9039FF' }}>CSS</code>,
+    <code className="py-1 px-1 md:px-2 rounded-md w-min" style={{ backgroundColor: '#F147F0' }}>React</code>,
+    <code className="py-1 px-1 md:px-2 rounded-md w-min" style={{ backgroundColor: '#FF6E6B' }}>Java</code>,
+    <code className="py-1 px-1 md:px-2 rounded-md w-min" style={{ backgroundColor: '#FF9F5A' }}>Python</code>
   ]
 
   // Trail used for languages listed under paragraph
@@ -68,7 +68,7 @@ function About(props) {
             I started programming when I enrolled in the CS program at my school, and have been creating projects ever since.
             When I'm not programming I enjoy going to the gym, shooting hoops, and playing my Fender Strat.</animated.p>
           </animated.div>
-          <div className="flex flex-row justify-around mt-4 text-xs md:text-sm lg:text-base" style={{ fontFamily: 'Consolas' }}>
+          <div className="flex flex-row justify-around mt-4 text-xs md:text-sm lg:text-base" >
             {trail.map((props, i) => <animated.div key={i} style={props} >{languagesHTML[i]}</animated.div>)}
           </div>
         </div>

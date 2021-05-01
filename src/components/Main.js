@@ -4,10 +4,11 @@ import Home from './Home'
 import AboutWord from './AboutWord'
 import About from './About'
 import ProjectsWord from './ProjectsWord'
+import Projects from './Projects'
 import Statbreak from './Statbreak'
 import Footer from './Footer'
 
-function Main() {
+export default function Main() {
 
   const [page, setPage] = useState(0)
 
@@ -92,8 +93,11 @@ function Main() {
       {/* Layer 4 // Projects */}
       <ProjectsWord parentCallBack={handleCallback} scroll={scroll} />
 
+      {/* Layer 5 // Projects */}
+      <Projects parentCallBack={handleCallback} page={page} />
+
       {/* Layer 5 // Statbreak */}
-      <Statbreak parentCallBack={handleCallback} page={page} />
+      {/* <Statbreak parentCallBack={handleCallback} page={page} /> */}
 
       {/* Layer 6 // Footer */}
       <Footer />
@@ -109,5 +113,3 @@ function Main() {
     </div>
   );
 }
-
-export default Main
