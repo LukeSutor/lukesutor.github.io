@@ -1,0 +1,25 @@
+.circle-text-container {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+}
+
+.circle-text-SVG {
+  width: max(15em, 35vw);
+  animation: rotation 15s infinite linear;
+  pointer-events: none;
+}
+
+.circle-text {
+  font-size: 2em;
+  fill: white;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-359deg);
+  }
+}

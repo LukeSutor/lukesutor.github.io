@@ -11,6 +11,7 @@ export default function AboutWord(props) {
   useEffect(() => {
     if (inView) {
       props.parentCallBack(1)
+      document.title = "About | Luke Sutor"
     }
   }, [inView])
 

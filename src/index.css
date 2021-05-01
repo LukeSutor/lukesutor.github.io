@@ -10,6 +10,10 @@ body {
   background: black;
 }
 
+p {
+  pointer-events: none;
+}
+
 /* Custom scrollbar */
 /* width */
 ::-webkit-scrollbar {

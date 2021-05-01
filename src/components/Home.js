@@ -25,6 +25,7 @@ export default function Home(props) {
   useEffect(() => {
     if (inView) {
       props.parentCallBack(0)
+      document.title = "Luke Sutor"
     }
   }, [inView])
 

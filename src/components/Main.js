@@ -2,10 +2,9 @@ import React, { useEffect, useState } from 'react'
 import { useTransition, animated } from 'react-spring'
 import Home from './Home'
 import AboutWord from './AboutWord'
-import About from './About'
+import NewAbout from './NewAbout'
 import ProjectsWord from './ProjectsWord'
 import Projects from './Projects'
-import Statbreak from './Statbreak'
 import Footer from './Footer'
 
 export default function Main() {
@@ -88,7 +87,7 @@ export default function Main() {
       <AboutWord parentCallBack={handleCallback} scroll={scroll} />
 
       {/* Layer 3 // About Paragraph */}
-      <About parentCallBack={handleCallback} page={page} />
+      <NewAbout parentCallBack={handleCallback} page={page} />
 
       {/* Layer 4 // Projects */}
       <ProjectsWord parentCallBack={handleCallback} scroll={scroll} />

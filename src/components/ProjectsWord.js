@@ -11,6 +11,7 @@ export default function ProjectsWord(props) {
   useEffect(() => {
     if (inView) {
       props.parentCallBack(2)
+      document.title = "Projects | Luke Sutor"
     }
   }, [inView])
 
