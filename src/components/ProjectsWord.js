@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useSpring, animated } from 'react-spring'
 import { useInView } from 'react-intersection-observer'
 
-function ProjectsWord(props) {
+export default function ProjectsWord(props) {
 
   const { ref, inView, entry } = useInView({
     threshold: 0.7
@@ -37,5 +37,3 @@ function ProjectsWord(props) {
     </div>
   );
 }
-
-export default ProjectsWord

@@ -1,24 +1,42 @@
+.image-container {
+  position: relative;
+  margin-bottom: 1em;
+  overflow: hidden;
+}
+
+.image {
+  -webkit-transition: transform 750ms ease-in-out;
+  -moz-transition: transform 750ms ease-in-out;
+  -o-transition: transform 750ms ease-in-out;
+  -ms-transition: transform 750ms ease-in-out;
+  transition: transform 750ms ease-in-out;
+}
+
+.image-container:hover .image {
+  transform: rotate(2deg) scale(1.05);
+}
+
 .overlay {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+  -webkit-transition: background-color 250ms ease-in-out;
+  -moz-transition: background-color 250ms ease-in-out;
+  -o-transition: background-color 250ms ease-in-out;
+  -ms-transition: background-color 250ms ease-in-out;
+  transition: background-color 250ms ease-in-out;
 }
 
 .overlay:hover {
   background-color: rgba(0, 0, 0, 0.25);
-  -webkit-transition: all 250ms ease;
-  -moz-transition: all 250ms ease;
-  -o-transition: all 250ms ease;
-  -ms-transition: all 250ms ease;
-  transition: all 250ms ease;
 }
 
 .info-label {
   position: absolute;
-  left: 1.5em;
-  bottom: 1em;
+  left: 5%;
+  bottom: 5%;
   display: grid;
   place-items: center;
   height: 3rem;
@@ -41,32 +59,38 @@
 
 .info {
   position: absolute;
-  left: 1.5em;
-  bottom: 1em;
+  left: 5%;
+  bottom: 5%;
   display: grid;
   place-items: center;
   overflow: hidden;
-  border-radius: 1.4em;
+  padding: 2em;
+  border-radius: 0;
   background-color: white;
-  height: calc(100% - 2em);
-  width: calc(100% - 3em);
+  border-radius: 1.4em;
+  max-height: 90%;
+  max-width: 90%;
   clip-path: circle(0% at 0% 100%);
+  -webkit-transition: clip-path 500ms ease-in-out;
+  -moz-transition: clip-path 500ms ease-in-out;
+  -o-transition: clip-path 500ms ease-in-out;
+  -ms-transition: clip-path 500ms ease-in-out;
+  transition: clip-path 500ms ease-in-out;
 }
 
-.outer {
+.info-container {
   width: fit-content;
   height: fit-content;
 }
 
-.outer:hover .info {
+.info-container:hover .info {
   clip-path: circle(75%);
-  transition: clip-path 500ms ease-in-out;
 }
 
 .link-container {
   position: absolute;
-  right: 1.5em;
-  bottom: 1em;
+  right: 5%;
+  bottom: 5%;
   display: flex;
   flex-direction: row;
   gap: 1em;

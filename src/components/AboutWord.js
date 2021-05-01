@@ -2,7 +2,7 @@ import React, { useEffect, useState, useCallback } from 'react'
 import { useSpring, animated, interpolate } from 'react-spring'
 import { useInView } from 'react-intersection-observer'
 
-function AboutWord(props) {
+export default function AboutWord(props) {
 
   const { ref, inView, entry } = useInView({
     threshold: 0.51
@@ -37,5 +37,3 @@ function AboutWord(props) {
     </div>
   );
 }
-
-export default AboutWord

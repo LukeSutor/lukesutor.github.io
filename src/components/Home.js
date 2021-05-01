@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react'
 import { useTransition, animated } from 'react-spring'
 import { useInView } from 'react-intersection-observer'
+import './css/home.css'
 
 
-function Home(props) {
+export default function Home(props) {
 
   const homeTransition = useTransition(true, null, {
     config: { mass: 1, tension: 10, friction: 5 },
@@ -47,5 +48,3 @@ function Home(props) {
     </div>
   );
 }
-
-export default Home

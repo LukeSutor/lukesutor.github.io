@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useSpring, animated } from 'react-spring'
 
-function Footer() {
+export default function Footer() {
 
   const [emailHover, setEmailHover] = useState(false)
 
@@ -75,5 +75,3 @@ function Footer() {
     </div>
   );
 }
-
-export default Footer

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useSpring, useTrail, animated } from 'react-spring'
 import { useInView } from 'react-intersection-observer'
 
-function About(props) {
+export default function About(props) {
 
   const { page } = props
 
@@ -76,5 +76,3 @@ function About(props) {
     </div>
   );
 }
-
-export default About

@@ -5,7 +5,7 @@ import statbreak from './images/statbreak.png'
 import Github from './images/Github'
 import Link from './images/Link'
 
-function Statbreak(props) {
+export default function Statbreak(props) {
 
   const { page } = props
 
@@ -27,26 +27,25 @@ function Statbreak(props) {
 
   return (
     <div ref={ref} className="w-full h-full">
-      <div className="relative mb-4">
-        <img src={statbreak} alt="" />
+      <div className="image-container">
+        <img src={statbreak} alt="" className="image"/>
         <div className="overlay">
           <div className="link-container">
             <a href="https://github.com/LukeSutor/React-Basketball-Site" target="_blank" rel="noreferrer" className="link"><Github /></a>
             <a href="https://statbreak.herokuapp.com" target="_blank" rel="noreferrer" className="link"><Link /></a>
           </div>
-          <div className="outer">
-            <p className="info-label text-xl font-bold">i</p>
+          <div className="info-container">
+            <em className="info-label text-xl font-bold">i</em>
             <div className="info">
-              <p className="px-8 md:text-lg lg:text-xl text-black text-justify">Statbreak is a social networking site for basketball players to share stats from their best games. 
-              Statbreak was created using the MERN stack, tailwindcss, and react-spring for animations.</p>
+              <p className="text-xs md:text-xl text-black text-justify">Statbreak is a social networking site for basketball 
+              players to share stats from their best games. 
+              Statbreak was created using the MERN stack, tailwindcss, and react-spring animations.</p>
             </div>
           </div>
         </div>
       </div>
-      <a href="https://statbreak.herokuapp.com" target="_blank" rel="noreferrer" className="text-4xl font-semibold hover:text-gray-200">Statbreak</a>
-      <p className="mt-2 text-xl text-gray-400">Platform for sharing basketball stats.</p>
+      <a href="https://statbreak.herokuapp.com" target="_blank" rel="noreferrer" className="text-2xl md:text-4xl font-semibold hover:text-gray-300">Statbreak</a>
+      <p className="mt-2 text-base md:text-2xl lg:text-xl text-gray-400">Platform for sharing basketball stats.</p>
     </div>
   );
 }
-
-export default Statbreak

@@ -69,15 +69,15 @@ export default function Main() {
       <div className="text-base md:text-lg lg:text-xl font-semibold tracking-wider" style={{ writingMode: 'vertical-rl' }}>
         {homeTransition.map(({ item, key, props }) =>
           item &&
-          <animated.p key={key} style={props} className="fixed top-4 right-4 z-10">HOME</animated.p>
+          <animated.p key={key} style={props} className="fixed top-4 right-2 z-10">HOME</animated.p>
         )}
         {aboutTransition.map(({ item, key, props }) =>
           item &&
-          <animated.p key={key} style={props} className="fixed top-4 right-4 z-10">ABOUT</animated.p>
+          <animated.p key={key} style={props} className="fixed top-4 right-2 z-10">ABOUT</animated.p>
         )}
         {projectsTransition.map(({ item, key, props }) =>
           item &&
-          <animated.p key={key} style={props} className="fixed top-4 right-4 z-10">PROJECTS</animated.p>
+          <animated.p key={key} style={props} className="fixed top-4 right-2 z-10">PROJECTS</animated.p>
         )}
       </div>
 
