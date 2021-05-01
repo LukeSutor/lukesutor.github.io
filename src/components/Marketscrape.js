@@ -33,6 +33,12 @@ export default function Marketscrape(props) {
             <a href="https://github.com/LukeSutor/marketscrape" target="_blank" rel="noreferrer" className="link"><Github /></a>
             <a href="https://lukesutor.github.io/marketscrape" target="_blank" rel="noreferrer" className="link"><Link /></a>
           </div>
+          <div className="outer">
+            <p className="info-label text-xl font-bold">i</p>
+            <div className="info">
+              <p className="text-xl text-black">Marketscrape is a...</p>
+            </div>
+          </div>
         </div>
       </div>
       <a href="https://lukesutor.github.io/marketscrape" target="_blank" rel="noreferrer" className="text-4xl font-semibold hover:text-gray-200">Marketscrape</a>

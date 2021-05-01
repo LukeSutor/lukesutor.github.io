@@ -34,6 +34,13 @@ function Statbreak(props) {
             <a href="https://github.com/LukeSutor/React-Basketball-Site" target="_blank" rel="noreferrer" className="link"><Github /></a>
             <a href="https://statbreak.herokuapp.com" target="_blank" rel="noreferrer" className="link"><Link /></a>
           </div>
+          <div className="outer">
+            <p className="info-label text-xl font-bold">i</p>
+            <div className="info">
+              <p className="px-8 md:text-lg lg:text-xl text-black text-justify">Statbreak is a social networking site for basketball players to share stats from their best games. 
+              Statbreak was created using the MERN stack, tailwindcss, and react-spring for animations.</p>
+            </div>
+          </div>
         </div>
       </div>
       <a href="https://statbreak.herokuapp.com" target="_blank" rel="noreferrer" className="text-4xl font-semibold hover:text-gray-200">Statbreak</a>

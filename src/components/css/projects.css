@@ -15,6 +15,54 @@
   transition: all 250ms ease;
 }
 
+.info-label {
+  position: absolute;
+  left: 1.5em;
+  bottom: 1em;
+  display: grid;
+  place-items: center;
+  height: 3rem;
+  width: 3rem;
+  border-style: solid white;
+  border-width: 3px;
+  border-color: white;
+  border-radius: 100%;
+  opacity: 0;
+}
+
+.overlay:hover .info-label {
+  opacity: 100;
+  -webkit-transition: opacity 500ms ease;
+  -moz-transition: opacity 500ms ease;
+  -o-transition: opacity 500ms ease;
+  -ms-transition: opacity 500ms ease;
+  transition: opacity 500ms ease;
+}
+
+.info {
+  position: absolute;
+  left: 1.5em;
+  bottom: 1em;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 1.4em;
+  background-color: white;
+  height: calc(100% - 2em);
+  width: calc(100% - 3em);
+  clip-path: circle(0% at 0% 100%);
+}
+
+.outer {
+  width: fit-content;
+  height: fit-content;
+}
+
+.outer:hover .info {
+  clip-path: circle(75%);
+  transition: clip-path 500ms ease-in-out;
+}
+
 .link-container {
   position: absolute;
   right: 1.5em;
@@ -44,7 +92,7 @@
   transition: opacity 500ms ease;
 }
 
-.overlay:hover .link:hover {
+.link:hover {
   background-color: rgba(255, 255, 255, 0.25);
 }
 
