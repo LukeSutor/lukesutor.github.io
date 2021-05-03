@@ -44,7 +44,7 @@ export default function Marketscrape(props) {
           <div className="info-container">
             <em className="info-label text-xl font-bold">i</em>
             <div className="info">
-              <p className="text-xs md:text-xl text-black text-justify">Marketscrape is a money saving tool in which users can
+              <p className="text-xs md:text-xl text-justify">Marketscrape is a money saving tool in which users can
               search Amazon, Walmart, and Ebay to ensure they're getting the best deal possible when buying online.
                 Marketscrape utilizes a Node.js backend that webscrapes using puppeteer and is connected to a React.js frontend.</p>
             </div>

@@ -17,7 +17,7 @@ export default function ProjectsWord(props) {
 
   const transition = useSpring({
     config: { mass: 1, tension: 40, friction: 1, clamp: true },
-    transform: `translate3d(${props.scroll / 2 + 700}px, 0, 0)`,
+    transform: `translate3d(${props.scroll / 2 + 950}px, 0, 0)`,
   })
 
   return (

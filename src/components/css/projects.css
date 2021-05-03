@@ -65,9 +65,8 @@
   place-items: center;
   overflow: hidden;
   padding: 2em;
-  border-radius: 0;
-  background-color: white;
   border-radius: 1.4em;
+  background-color: rgba(0, 0, 0, 0.85);
   max-height: 90%;
   max-width: 90%;
   clip-path: circle(0% at 0% 100%);

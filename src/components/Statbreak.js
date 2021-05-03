@@ -44,7 +44,7 @@ export default function Statbreak(props) {
           <div className="info-container">
             <em className="info-label text-xl font-bold">i</em>
             <div className="info">
-              <p className="text-xs md:text-xl text-black text-justify">Statbreak is a social networking site for basketball 
+              <p className="text-xs md:text-xl text-justify">Statbreak is a social networking site for basketball 
               players to share stats from their best games. 
               Statbreak was created using the MERN stack, tailwindcss, and react-spring animations.</p>
             </div>
