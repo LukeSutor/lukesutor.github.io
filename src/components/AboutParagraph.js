@@ -24,7 +24,7 @@ export default function AboutParagraph(props) {
 
   const aboutParagraphs = [
     <p>I'm Luke Sutor, a 17 year-old junior at Suncoast Community High School in Palm Beach County, Florida.</p>,
-    <p>I began programming when I enrolled in the CS program at my school, and have been creating projects ever since.</p>,
+    <p className="py-6">I began programming when I enrolled in the CS program at my school, and have been creating projects ever since.</p>,
     <p>When I'm not programming I enjoy going to the gym, shooting hoops, and playing my Fender Strat.</p>
   ]
 
@@ -54,13 +54,13 @@ export default function AboutParagraph(props) {
 
   return (
     <div ref={ref}>
-      <animated.p style={headerTransition} className="mb-24 text-4xl md:text-6xl lg:text-7xl text-white font-semibold whitespace-nowrap">I build
+      <animated.p style={headerTransition} className="mb-16 md:mb-24 text-4xl md:text-6xl lg:text-7xl text-white font-semibold whitespace-nowrap">I build
           <em className="text-blue-600"> websites</em> and <br /><em className="text-blue-600">software solutions</em>.</animated.p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 grid-rows-1">
-        <animated.p style={subheaderTransition} className="pb-8 text-3xl md:text-4xl font-semibold">Hey There!</animated.p>
+        <animated.p style={subheaderTransition} className="pb-6 md:pb-8 text-3xl md:text-4xl font-semibold">Hey There!</animated.p>
 
-        <div className="flex flex-col gap-6 text-base md:text-xl lg:text-2xl" >
+        <div className="flex flex-col text-base md:text-xl lg:text-2xl" >
           {trail.map((props, i) => <animated.div key={i} style={props} >{aboutParagraphs[i]}</animated.div>)}
         </div>
       </div>

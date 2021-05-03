@@ -38,7 +38,7 @@ export default function Marketscrape(props) {
         <img src={marketscrape} alt="" className="image" />
         <div className="overlay">
           <div className="link-container">
-            <a href="https://github.com/LukeSutor/marketscrape" target="_blank" rel="noreferrer" className="link"><Github /></a>
+            <a href="https://github.com/LukeSutor/marketscrape" target="_blank" rel="noreferrer" className="link mr-4"><Github /></a>
             <a href="https://lukesutor.github.io/marketscrape" target="_blank" rel="noreferrer" className="link"><Link /></a>
           </div>
           <div className="info-container">

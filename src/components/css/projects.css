@@ -44,7 +44,9 @@
   border-style: solid white;
   border-width: 3px;
   border-color: white;
-  border-radius: 100%;
+  border-radius: 999px;
+  -moz-border-radius: 99px;
+  -webkit-border-radius: 999px;
   opacity: 0;
 }
 
@@ -92,7 +94,6 @@
   bottom: 5%;
   display: flex;
   flex-direction: row;
-  gap: 1em;
 }
 
 .link {
@@ -102,7 +103,9 @@
   border-style: solid white;
   border-width: 3px;
   border-color: white;
-  border-radius: 100%;
+  border-radius: 999px;
+  -moz-border-radius: 99px;
+  -webkit-border-radius: 999px;
   opacity: 0;
 }
 

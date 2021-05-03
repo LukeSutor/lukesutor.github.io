@@ -38,7 +38,7 @@ export default function Statbreak(props) {
         <img src={statbreak} alt="" className="image"/>
         <div className="overlay">
           <div className="link-container">
-            <a href="https://github.com/LukeSutor/React-Basketball-Site" target="_blank" rel="noreferrer" className="link"><Github /></a>
+            <a href="https://github.com/LukeSutor/React-Basketball-Site" target="_blank" rel="noreferrer" className="link mr-4"><Github /></a>
             <a href="https://statbreak.herokuapp.com" target="_blank" rel="noreferrer" className="link"><Link /></a>
           </div>
           <div className="info-container">

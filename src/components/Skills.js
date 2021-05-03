@@ -23,11 +23,11 @@ export default function Skills(props) {
   }, [inView, page])
 
   const languagesHTML = [
-    <p>HTML</p>,
-    <p>CSS</p>,
-    <p>Javascript</p>,
-    <p>React</p>,
-    <p>Node</p>,
+    <p className="pb-4">HTML</p>,
+    <p className="pb-4">CSS</p>,
+    <p className="pb-4">Javascript</p>,
+    <p className="pb-4">React</p>,
+    <p className="pb-4">Node</p>,
     <p>Python</p>
   ]
 
@@ -50,9 +50,9 @@ export default function Skills(props) {
   return (
     <div ref={ref}>
       <div className="grid grid-cols-1 md:grid-cols-2 grid-rows-1">
-        <animated.p style={transition} className="pb-8 text-3xl md:text-4xl font-semibold">My Skills</animated.p>
+        <animated.p style={transition} className="pb-6 md:pb-8 text-3xl md:text-4xl font-semibold">My Skills</animated.p>
 
-        <div className="flex flex-col gap-4 text-base md:text-xl lg:text-2xl" >
+        <div className="flex flex-col text-base md:text-xl lg:text-2xl" >
           {trail.map((props, i) => <animated.div key={i} style={props} >{languagesHTML[i]}</animated.div>)}
         </div>
       </div>

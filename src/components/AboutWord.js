@@ -22,7 +22,7 @@ export default function AboutWord(props) {
 
   return (
     <div ref={ref} className="w-full h-full overflow-hidden">
-      <div className="w-full h-full mt-32 mb-8 leading-none" style={{ zIndex: -1 }}>
+      <div className="w-full h-full mt-16 md:mt-32 mb-8 leading-none" style={{ zIndex: -1 }}>
         <animated.svg style={transition} width="100%" viewBox="0 0 294 63" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-5/6 h-full ml-auto my-auto">
           <defs>
             <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="25%">

@@ -17,12 +17,12 @@ export default function ProjectsWord(props) {
 
   const transition = useSpring({
     config: { mass: 1, tension: 40, friction: 1, clamp: true },
-    transform: `translate3d(${props.scroll / 2 + 950}px, 0, 0)`,
+    transform: `translate3d(${props.scroll / 2 + 850}px, 0, 0)`,
   })
 
   return (
     <div ref={ref} className="w-full h-full overflow-hidden">
-      <div className="relative w-full h-full my-32 leading-none" style={{ zIndex: -1 }}>
+      <div className="relative w-full h-full my-16 md:my-32 leading-none" style={{ zIndex: -1 }}>
         <animated.svg style={transition} width="100%" viewBox="0 0 294 45" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-5/6 h-full mx-auto my-auto">
           <defs>
             <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="25%">
