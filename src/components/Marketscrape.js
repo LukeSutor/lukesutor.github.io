@@ -38,14 +38,14 @@ export default function Marketscrape(props) {
         <img src={marketscrape} alt="" className="image" />
         <div className="overlay">
           <div className="link-container">
-            <a href="https://github.com/LukeSutor/marketscrape" target="_blank" rel="noreferrer" className="link mr-4"><Github /></a>
-            <a href="https://lukesutor.github.io/marketscrape" target="_blank" rel="noreferrer" className="link"><Link /></a>
+            <a href="https://github.com/LukeSutor/marketscrape" target="_blank" rel="noreferrer" className="link mr-4 rounded-full border-2 border-white"><Github /></a>
+            <a href="https://lukesutor.github.io/marketscrape" target="_blank" rel="noreferrer" className="link rounded-full border-2 border-white"><Link /></a>
           </div>
           <div className="info-container">
-            <em className="info-label text-xl font-bold">i</em>
+            <em className="info-label text-xl font-bold rounded-full border-2 border-white">i</em>
             <div className="info">
               <p className="text-xs md:text-xl text-justify">Marketscrape is a money-saving tool in which users can
-              search Amazon, Walmart, and Ebay to ensure they're getting the best deal possible when buying online.
+              search Amazon, Walmart, and eBay to ensure they're getting the best deal possible when buying online.
                 Marketscrape utilizes a Node.js backend that webscrapes using puppeteer and is connected to a React.js frontend.</p>
             </div>
           </div>

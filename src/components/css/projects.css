@@ -41,12 +41,6 @@
   place-items: center;
   height: 3rem;
   width: 3rem;
-  border-style: solid white;
-  border-width: 3px;
-  border-color: white;
-  border-radius: 999px;
-  -moz-border-radius: 99px;
-  -webkit-border-radius: 999px;
   opacity: 0;
 }
 
@@ -100,12 +94,6 @@
   width: 3em;
   height: 3em;
   padding: 0.5em;
-  border-style: solid white;
-  border-width: 3px;
-  border-color: white;
-  border-radius: 999px;
-  -moz-border-radius: 99px;
-  -webkit-border-radius: 999px;
   opacity: 0;
 }
 

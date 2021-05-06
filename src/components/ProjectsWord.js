@@ -5,7 +5,7 @@ import { useInView } from 'react-intersection-observer'
 export default function ProjectsWord(props) {
 
   const { ref, inView, entry } = useInView({
-    threshold: 0.7
+    threshold: 0.9
   })
 
   useEffect(() => {
