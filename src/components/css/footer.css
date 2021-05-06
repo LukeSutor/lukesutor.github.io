@@ -1,0 +1,66 @@
+.email {
+  position: relative;
+  color: black;
+  opacity: 60%;
+  -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -o-transition: all 250ms ease;
+  -ms-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+
+.email:hover {
+  color: #9039ff;
+  opacity: 100%;
+}
+
+.email-underline {
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0.125rem;
+  background-color: #9039ff;
+  -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -o-transition: all 250ms ease;
+  -ms-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+
+.email:hover .email-underline {
+  width: 100%;
+}
+
+
+.github {
+  position: relative;
+  color: black;
+  opacity: 60%;
+  -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -o-transition: all 250ms ease;
+  -ms-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+
+.github:hover {
+  color: #f147f0;
+  opacity: 100%;
+}
+
+.github-underline {
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0.125rem;
+  background-color: #f147f0;
+  -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -o-transition: all 250ms ease;
+  -ms-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+
+.github:hover .github-underline {
+  width: 100%;
+}
