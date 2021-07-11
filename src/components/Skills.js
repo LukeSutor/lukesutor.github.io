@@ -49,11 +49,11 @@ export default function Skills(props) {
   })
 
   return (
-    <div ref={ref}>
+    <div ref={ref} className="text-black">
       <div className="grid grid-cols-1 md:grid-cols-2 grid-rows-1">
         <animated.p style={transition} className="pb-6 md:pb-8 text-3xl md:text-4xl font-semibold">My Skills</animated.p>
 
-        <div className="flex flex-col text-base md:text-xl lg:text-2xl text-gray-400" >
+        <div className="flex flex-col text-base md:text-xl lg:text-2xl text-gray-600 font-thin" >
           {trail.map((props, i) => <animated.div key={i} style={props} >{languagesHTML[i]}</animated.div>)}
         </div>
       </div>

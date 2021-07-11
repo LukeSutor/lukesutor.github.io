@@ -19,7 +19,7 @@ export default function Home(props) {
   })
 
   const { ref, inView, entry } = useInView({
-    threshold: 0.6
+    threshold: 0.3
   })
 
   useEffect(() => {

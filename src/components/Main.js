@@ -72,7 +72,7 @@ export default function Main() {
         )}
         {aboutTransition.map(({ item, key, props }) =>
           item &&
-          <animated.p key={key} style={props} className="fixed top-4 right-2 z-10">ABOUT</animated.p>
+          <animated.p key={key} style={props} className="fixed top-4 right-2 z-10 text-black">ABOUT</animated.p>
         )}
         {projectsTransition.map(({ item, key, props }) =>
           item &&
