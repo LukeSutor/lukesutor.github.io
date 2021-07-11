@@ -1,6 +1,7 @@
 import React from 'react'
 import AboutParagraph from './AboutParagraph'
 import Skills from './Skills'
+import './css/about.css'
 
 export default function About(props) {
   return (

@@ -55,12 +55,12 @@ export default function AboutParagraph(props) {
   return (
     <div ref={ref}>
       <animated.p style={headerTransition} className="mb-16 md:mb-24 text-4xl md:text-6xl lg:text-7xl text-white font-semibold whitespace-nowrap">I build
-          <em className="text-blue-600"> websites</em> and <br /><em className="text-blue-600">software solutions</em>.</animated.p>
+          <em className="text-gradient"> websites</em> and <br /><em className="text-gradient">software solutions</em>.</animated.p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 grid-rows-1">
         <animated.p style={subheaderTransition} className="pb-6 md:pb-8 text-3xl md:text-4xl font-semibold">Hey There!</animated.p>
 
-        <div className="flex flex-col text-base md:text-xl lg:text-2xl" >
+        <div className="flex flex-col text-base md:text-xl lg:text-2xl text-gray-400" >
           {trail.map((props, i) => <animated.div key={i} style={props} >{aboutParagraphs[i]}</animated.div>)}
         </div>
       </div>
