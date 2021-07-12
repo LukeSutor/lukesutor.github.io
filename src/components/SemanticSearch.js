@@ -33,7 +33,7 @@ export default function SemanticSearch(props) {
 
 
   return (
-    <animated.div ref={ref} style={transition} className="w-full h-full mt-24 lg:mt-32">
+    <animated.div ref={ref} style={transition} className="w-full h-full pt-24 lg:pt-32">
       <div className="image-container">
         <img src={semantic_search} alt="" className="image" />
         <div className="overlay">
@@ -53,7 +53,7 @@ export default function SemanticSearch(props) {
       </div>
       <div className="flex flex-row justify-between">
         <a href="https://chrome.google.com/webstore/detail/semantic-search/moknadjgghaffcedafbafjfjgnaanalm" target="_blank" rel="noreferrer" className="text-2xl md:text-4xl font-semibold hover:text-gray-300 whitespace-nowrap">Semantic Search</a>
-        <p className="my-auto text-xl text-gray-400 font-thin">06.2021</p>
+        <p className="my-auto text-base md:text-xl text-gray-400 font-thin">06.2021</p>
       </div>
       <p className="mt-2 text-base md:text-2xl lg:text-xl text-gray-400">Search websites to find the answers you need.</p>
     </animated.div>
