@@ -18,7 +18,7 @@ export default function Marketscrape(props) {
   })
 
   const { ref, inView, entry } = useInView({
-    threshold: 0.7
+    threshold: 0.3
   })
 
   useEffect(() => {
@@ -45,13 +45,16 @@ export default function Marketscrape(props) {
             <em className="info-label text-xl font-bold rounded-full border-2 border-white">i</em>
             <div className="info">
               <p className="text-xs md:text-xl text-justify">Marketscrape is a money-saving tool in which users can
-              search Amazon, Walmart, and eBay to ensure they're getting the best deal possible when buying online.
+                search Amazon, Walmart, and eBay to ensure they're getting the best deal possible when buying online.
                 Marketscrape utilizes a Node.js backend that webscrapes using puppeteer and is connected to a React.js frontend.</p>
             </div>
           </div>
         </div>
       </div>
-      <a href="https://lukesutor.github.io/marketscrape" target="_blank" rel="noreferrer" className="text-2xl md:text-4xl font-semibold hover:text-gray-300">Marketscrape</a>
+      <div className="flex flex-row justify-between">
+        <a href="https://lukesutor.github.io/marketscrape" target="_blank" rel="noreferrer" className="text-2xl md:text-4xl font-semibold hover:text-gray-300">Marketscrape</a>
+        <p className="my-auto text-xl font-thin">04.2021</p>
+      </div>
       <p className="mt-2 text-base md:text-2xl lg:text-xl text-gray-400">Product price comparison tool.</p>
     </animated.div>
   )

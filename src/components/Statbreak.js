@@ -33,7 +33,8 @@ export default function Statbreak(props) {
 
 
   return (
-    <animated.div ref={ref} style={transition} className="w-full h-full">
+    <animated.div ref={ref} style={transition} className="relative w-full h-full">
+      {/* <p className="number">01</p> */}
       <div className="image-container">
         <img src={statbreak} alt="" className="image" />
         <div className="overlay">
@@ -45,13 +46,16 @@ export default function Statbreak(props) {
             <em className="info-label text-xl font-bold rounded-full border-2 border-white">i</em>
             <div className="info">
               <p className="text-xs md:text-xl text-justify">Statbreak is a social networking site for basketball
-              players to share stats from their best games.
-              Statbreak was created using the MERN stack, tailwindcss, and react-spring animations.</p>
+                players to share stats from their best games.
+                Statbreak was created using the MERN stack, tailwindcss, and react-spring animations.</p>
             </div>
           </div>
         </div>
       </div>
-      <a href="https://statbreak.herokuapp.com" target="_blank" rel="noreferrer" className="text-2xl md:text-4xl font-semibold hover:text-gray-300">Statbreak</a>
+      <div className="flex flex-row justify-between">
+        <a href="https://statbreak.herokuapp.com" target="_blank" rel="noreferrer" className="text-2xl md:text-4xl font-semibold hover:text-gray-300">Statbreak</a>
+        <p className="my-auto text-xl font-thin">02.2021</p>
+      </div>
       <p className="mt-2 text-base md:text-2xl lg:text-xl text-gray-400">Platform for sharing basketball stats.</p>
     </animated.div>
   );
