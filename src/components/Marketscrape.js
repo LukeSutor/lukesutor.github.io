@@ -53,7 +53,7 @@ export default function Marketscrape(props) {
       </div>
       <div className="flex flex-row justify-between">
         <a href="https://lukesutor.github.io/marketscrape" target="_blank" rel="noreferrer" className="text-2xl md:text-4xl font-semibold hover:text-gray-300">Marketscrape</a>
-        <p className="my-auto text-xl font-thin">04.2021</p>
+        <p className="my-auto text-xl text-gray-400 font-thin">04.2021</p>
       </div>
       <p className="mt-2 text-base md:text-2xl lg:text-xl text-gray-400">Product price comparison tool.</p>
     </animated.div>
