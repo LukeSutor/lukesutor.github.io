@@ -23,13 +23,30 @@ export default function Skills(props) {
   }, [inView, page])
 
   const languagesHTML = [
-    <p className="pb-4">HTML</p>,
-    <p className="pb-4">CSS</p>,
-    <p className="pb-4">Javascript</p>,
-    <p className="pb-4">Typescript</p>,
-    <p className="pb-4">React</p>,
-    <p className="pb-4">Node.js</p>,
-    <p>Python</p>
+    <div className="flex flex-row justify-between pb-4">
+      <p>HTML</p>
+      <p>CSS</p>
+    </div>,
+    <div className="flex flex-row justify-between pb-4">
+      <p>Javascript</p>
+      <p>Typescript</p>
+    </div>,
+    <div className="flex flex-row justify-between pb-4">
+      <p>React</p>
+      <p>Node.js</p>
+    </div>,
+    <div className="flex flex-row justify-between pb-4">
+      <p>Java</p>
+      <p>Python</p>
+    </div>
+    // <p className="pb-4">HTML</p>,
+    // <p className="pb-4">CSS</p>,
+    // <p className="pb-4">Javascript</p>,
+    // <p className="pb-4">Typescript</p>,
+    // <p className="pb-4">React</p>,
+    // <p className="pb-4">Node.js</p>,
+    // <p className="pb-4">Java</p>,
+    // <p>Python</p>
   ]
 
   // Trail for skills
@@ -56,6 +73,10 @@ export default function Skills(props) {
         <div className="flex flex-col text-base md:text-xl lg:text-2xl text-gray-600 font-thin" >
           {trail.map((props, i) => <animated.div key={i} style={props} >{languagesHTML[i]}</animated.div>)}
         </div>
+      </div>
+      <div className="flex flex-row justify-between pb-4">
+        <p></p>
+        <p></p>
       </div>
     </div>
   )

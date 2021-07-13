@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { useSpring, animated } from 'react-spring'
 import { useInView } from 'react-intersection-observer'
-import statbreak from './images/statbreak.png'
-import Github from './images/Github'
-import Link from './images/Link'
+import statbreak from '../images/statbreak.png'
+import Github from '../images/Github'
+import Link from '../images/Link'
 
 export default function Statbreak(props) {
 
@@ -33,7 +33,7 @@ export default function Statbreak(props) {
 
 
   return (
-    <animated.div ref={ref} style={transition} className="relative w-full h-full">
+    <animated.div ref={ref} style={transition}>
       <div className="image-container">
         <img src={statbreak} alt="" className="image" />
         <div className="overlay">
@@ -55,7 +55,7 @@ export default function Statbreak(props) {
         <a href="https://statbreak.herokuapp.com" target="_blank" rel="noreferrer" className="text-2xl md:text-4xl font-semibold hover:text-gray-300">Statbreak</a>
         <p className="my-auto text-base md:text-xl text-gray-400 font-thin">02.2021</p>
       </div>
-      <p className="mt-2 text-base md:text-2xl lg:text-xl text-gray-400">Platform for sharing basketball stats.</p>
+      <p className="mt-2 text-base md:text-2xl lg:text-xl text-gray-400">Record and share your basketball stats.</p>
     </animated.div>
   );
 }

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { useSpring, animated } from 'react-spring'
 import { useInView } from 'react-intersection-observer'
-import semantic_search from './images/semantic_search.png'
-import Github from './images/Github'
-import Link from './images/Link'
+import semantic_search from '../images/semantic_search.png'
+import Github from '../images/Github'
+import Link from '../images/Link'
 
 export default function SemanticSearch(props) {
 
@@ -33,7 +33,7 @@ export default function SemanticSearch(props) {
 
 
   return (
-    <animated.div ref={ref} style={transition} className="w-full h-full pt-24 lg:pt-32">
+    <animated.div ref={ref} style={transition}>
       <div className="image-container">
         <img src={semantic_search} alt="" className="image" />
         <div className="overlay">
@@ -55,7 +55,7 @@ export default function SemanticSearch(props) {
         <a href="https://chrome.google.com/webstore/detail/semantic-search/moknadjgghaffcedafbafjfjgnaanalm" target="_blank" rel="noreferrer" className="text-2xl md:text-4xl font-semibold hover:text-gray-300 whitespace-nowrap">Semantic Search</a>
         <p className="my-auto text-base md:text-xl text-gray-400 font-thin">06.2021</p>
       </div>
-      <p className="mt-2 text-base md:text-2xl lg:text-xl text-gray-400">Search websites to find the answers you need.</p>
+      <p className="mt-2 text-base md:text-2xl lg:text-xl text-gray-400">Search websites for the answers you need.</p>
     </animated.div>
   )
 }

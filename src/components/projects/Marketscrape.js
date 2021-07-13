@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { useSpring, animated } from 'react-spring'
 import { useInView } from 'react-intersection-observer'
-import marketscrape from './images/marketscrape.png'
-import Github from './images/Github'
-import Link from './images/Link'
+import marketscrape from '../images/marketscrape.png'
+import Github from '../images/Github'
+import Link from '../images/Link'
 
 export default function Marketscrape(props) {
 
@@ -33,7 +33,7 @@ export default function Marketscrape(props) {
 
 
   return (
-    <animated.div ref={ref} style={transition} className="w-full h-full">
+    <animated.div ref={ref} style={transition}>
       <div className="image-container">
         <img src={marketscrape} alt="" className="image" />
         <div className="overlay">
@@ -55,7 +55,7 @@ export default function Marketscrape(props) {
         <a href="https://lukesutor.github.io/marketscrape" target="_blank" rel="noreferrer" className="text-2xl md:text-4xl font-semibold hover:text-gray-300">Marketscrape</a>
         <p className="my-auto text-base md:text-xl text-gray-400 font-thin">04.2021</p>
       </div>
-      <p className="mt-2 text-base md:text-2xl lg:text-xl text-gray-400">Product price comparison tool.</p>
+      <p className="mt-2 text-base md:text-2xl lg:text-xl text-gray-400">Compare online retailer prices.</p>
     </animated.div>
   )
 }
