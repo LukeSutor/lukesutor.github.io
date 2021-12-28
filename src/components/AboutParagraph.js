@@ -23,7 +23,7 @@ export default function AboutParagraph(props) {
   }, [inView, page])
 
   const aboutParagraphs = [
-    <p>I'm Luke Sutor, a 17 year-old senior at Suncoast Community High School in Palm Beach County, Florida.</p>,
+    <p>I'm Luke Sutor, an 18 year-old senior at Suncoast Community High School in Palm Beach County, Florida.</p>,
     <p className="py-6">I began programming when I enrolled in the CS program at my school, and have been creating projects ever since.</p>,
     <p>When I'm not programming I enjoy going to the gym, shooting hoops, and playing my Fender Strat.</p>
   ]
