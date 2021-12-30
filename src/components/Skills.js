@@ -28,25 +28,17 @@ export default function Skills(props) {
       <p>CSS</p>
     </div>,
     <div className="flex flex-row justify-between pb-4">
-      <p>Javascript</p>
-      <p>Typescript</p>
-    </div>,
-    <div className="flex flex-row justify-between pb-4">
-      <p>React</p>
+      <p>JavaScript</p>
       <p>Node.js</p>
     </div>,
     <div className="flex flex-row justify-between pb-4">
-      <p>Java</p>
+      <p>React</p>
+      <p>Next.js</p>
+    </div>,
+    <div className="flex flex-row justify-between pb-4">
       <p>Python</p>
+      <p>Java</p>
     </div>
-    // <p className="pb-4">HTML</p>,
-    // <p className="pb-4">CSS</p>,
-    // <p className="pb-4">Javascript</p>,
-    // <p className="pb-4">Typescript</p>,
-    // <p className="pb-4">React</p>,
-    // <p className="pb-4">Node.js</p>,
-    // <p className="pb-4">Java</p>,
-    // <p>Python</p>
   ]
 
   // Trail for skills
@@ -70,7 +62,7 @@ export default function Skills(props) {
       <div className="grid grid-cols-1 md:grid-cols-2 grid-rows-1">
         <animated.p style={transition} className="pb-6 md:pb-8 text-3xl md:text-4xl font-semibold">My Skills</animated.p>
 
-        <div className="flex flex-col text-base md:text-xl lg:text-2xl text-gray-600 font-thin" >
+        <div className="flex flex-col text-base md:text-xl lg:text-2xl text-gray-600" >
           {trail.map((props, i) => <animated.div key={i} style={props} >{languagesHTML[i]}</animated.div>)}
         </div>
       </div>
