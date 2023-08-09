@@ -24,21 +24,25 @@ export default function Skills(props) {
 
   const languagesHTML = [
     <div className="flex flex-row justify-between pb-4">
+      <p>Python</p>
+      <p>PyTorch</p>
+    </div>,
+    <div className="flex flex-row justify-between pb-4">
+      <p>C++</p>
+      <p>AWS</p>
+    </div>,
+    <div className="flex flex-row justify-between pb-4">
       <p>HTML</p>
       <p>CSS</p>
     </div>,
     <div className="flex flex-row justify-between pb-4">
       <p>JavaScript</p>
-      <p>Node.js</p>
+      <p>Java</p>
     </div>,
     <div className="flex flex-row justify-between pb-4">
       <p>React</p>
       <p>Next.js</p>
     </div>,
-    <div className="flex flex-row justify-between pb-4">
-      <p>Python</p>
-      <p>Java</p>
-    </div>
   ]
 
   // Trail for skills

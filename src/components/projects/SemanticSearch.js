@@ -44,9 +44,9 @@ export default function SemanticSearch(props) {
           <div className="info-container">
             <em className="info-label text-xl font-bold rounded-full border-2 border-white">i</em>
             <div className="info">
-              <p className="text-xs md:text-xl text-justify">Semantic Search is a chrome extension that makes use of the
-                NLPcloud api, and the RoBERTa natural language processing model to answer your questions using either
-                the text from a webpage or user entered text.</p>
+              <p className="text-xs md:text-xl text-justify">Semantic Search is a chrome extension with over 
+              100 users that makes use of the OpenAI API, and ChatGPT to answer your questions using 
+              either the text from a webpage or user entered text.</p>
             </div>
           </div>
         </div>
