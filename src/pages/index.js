@@ -19,6 +19,10 @@ const IndexPage = () => (
         <div className="h-0.5 w-full bg-gray-500 my-16"></div>
 
         <Experience />
+
+        <div className="h-0.5 w-full bg-gray-500 my-16"></div>
+
+
         
       </div>
     </div>
