@@ -1,19 +1,26 @@
 import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+// import { Link } from "gatsby"
+// import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
+import Hero from "../components/hero"
+import Experience from "../components/experience"
 import Seo from "../components/seo"
 
 
 const IndexPage = () => (
   <Layout>
-    <div>
+    <div className="flex justify-center items-center w-full px-16">
+      <div className="w-full max-w-screen-xl">
 
-      <h1 className="text-3xl text-red-400">
-        Welcome to <b>Gatsby!</b>
-      </h1>
-      
+        <div className="h-24" />
+        <Hero />
+
+        <div className="h-0.5 w-full bg-gray-500 my-16"></div>
+
+        <Experience />
+        
+      </div>
     </div>
   </Layout>
 )

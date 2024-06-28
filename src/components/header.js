@@ -2,25 +2,24 @@ import * as React from "react"
 import { Link } from "gatsby"
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      margin: `0 auto`,
-      padding: `var(--space-4) var(--size-gutter)`,
-      display: `flex`,
-      alignItems: `center`,
-      justifyContent: `space-between`,
-    }}
-  >
-    <Link
-      to="/"
-      style={{
-        fontSize: `var(--font-sm)`,
-        textDecoration: `none`,
-      }}
-      
-    >
-      {siteTitle}
-    </Link>
+  <header className="flex justify-between w-full bg-gray-50 px-16 py-6">
+      <Link
+        to="/"
+      >
+        {siteTitle}
+      </Link>
+      <div className="flex flex-row items-center space-x-6">
+        <Link
+          to="/#experience"
+        >
+          Experience
+        </Link>
+        <Link
+          to="/#projects"
+          >
+            Projects
+          </Link>
+      </div>
   </header>
 )
 
