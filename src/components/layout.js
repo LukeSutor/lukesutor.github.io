@@ -10,11 +10,11 @@ import * as React from "react"
 import Header from "./header"
 
 const Layout = ({ children }) => {
-
   return (
     <>
-      <Header siteTitle={'Luke Sutor'} />
-      <div className="m-0"
+      <Header siteTitle={"Luke Sutor"} />
+      <div
+        className="m-0"
         // style={{
         //   margin: `0 auto`,
         //   maxWidth: `var(--size-content)`,
