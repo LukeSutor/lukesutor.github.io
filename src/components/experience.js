@@ -35,21 +35,21 @@ const years = [
         color: "#073e6f",
         range: "2023/6-2023/8",
       },
+      {
+        title: "Artificial Intelligence Scholars Program",
+        position: "Undergraduate Researcher",
+        months: "Jun '23 - Apr '25",
+        image: ai_scholars,
+        caption:
+          "During my time at Gaming Analytics, I trained custom transformer-based NER models on a synthetic dataset I generated. These models served as the backbone for a text-to-graph-query pipeline that I created to address weaknesses of the prior system.",
+        color: "#0021a5",
+        range: "2023/4-2025/4",
+      }
     ],
   },
   {
     year: 2022,
     experiences: [
-        {
-            title: "Artificial Intelligence Scholars Program",
-            position: "Undergraduate Researcher",
-            months: "Jun '23 - Apr '25",
-            image: ai_scholars,
-            caption:
-              "During my time at Gaming Analytics, I trained custom transformer-based NER models on a synthetic dataset I generated. These models served as the backbone for a text-to-graph-query pipeline that I created to address weaknesses of the prior system.",
-            color: "#0021a5",
-            range: "2023/4-2025/4",
-          },
           {
             title: "University of Florida",
             position: "BSc in Computer Science",
@@ -58,7 +58,7 @@ const years = [
             caption:
               "During my time at Gaming Analytics, I trained custom transformer-based NER models on a synthetic dataset I generated. These models served as the backbone for a text-to-graph-query pipeline that I created to address weaknesses of the prior system.",
             color: "#fa4616",
-            range: "2022/6-2026/5",
+            range: "2022/7-2026/5",
           }
     ],
   },
