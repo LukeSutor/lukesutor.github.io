@@ -4,6 +4,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import github from "../images/github.png"
 import linkedin from "../images/linkedin.png"
 import mail from "../images/mail.png"
+import resume from "../images/resume.png"
 
 const links = [
   {
@@ -20,6 +21,11 @@ const links = [
       "image": mail,
       "href": "mailto:lukesutor@gmail.com",
       "alt": "Email"
+  },
+  {
+    "image": resume,
+    "href": "/resume",
+    "alt": "Resume"
   }
 ]
 
@@ -29,7 +35,7 @@ const Hero = ({}) => (
       <h1 className="text-5xl font-bold">Hello, I'm Luke Sutor</h1>
       <p className="text-xl mb-4">
         I'm a rising Junior studying Computer Science at the University of
-        Florida.
+        Florida 🐊
       </p>
       <div className="flex flex-row space-x-4">
         {links.map((link) => {

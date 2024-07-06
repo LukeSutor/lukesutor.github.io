@@ -1,11 +1,11 @@
 import * as React from "react"
-import { StaticImage } from "gatsby-plugin-image"
 
 // Images
 import gaming_analytics from "../images/gaming_analytics.jpg"
 import william_ryan from "../images/william_ryan.jpg"
 import ai_scholars from "../images/ai_scholars.jpg"
 import pilot_media from "../images/pilot_media.jpg"
+import uf from "../images/uf.png"
 
 const years = [
   {
@@ -14,7 +14,7 @@ const years = [
       {
         title: "Gaming Analytics Inc.",
         position: "Software Engineer Intern (Data Science)",
-        months: "Mar - Aug",
+        months: "Mar '24 - Aug '24",
         image: gaming_analytics,
         caption:
           "During my time at Gaming Analytics, I trained custom transformer-based NER models on a synthetic dataset I generated. These models served as the backbone for a text-to-graph-query pipeline that I created to address weaknesses of the prior system.",
@@ -29,9 +29,9 @@ const years = [
       {
         title: "William Ryan Group",
         position: "Software Engineer Intern",
-        months: "Jun - Aug",
+        months: "Jun '23 - Aug '23",
         image: william_ryan,
-        caption: "At gaming analytics, I trained transformer-based NER models ",
+        caption: "At William Ryan Group, I created a realtime data visualization interface using python, VBA, and excel spreadsheets. This enabled casino managers with real-time data insights which they could filter by customer tier levels, dates, and employee response times, allowing for data-driven decision making.",
         color: "#073e6f",
         range: "2023/6-2023/8",
       },
@@ -41,7 +41,7 @@ const years = [
         months: "Jun '23 - Apr '25",
         image: ai_scholars,
         caption:
-          "During my time at Gaming Analytics, I trained custom transformer-based NER models on a synthetic dataset I generated. These models served as the backbone for a text-to-graph-query pipeline that I created to address weaknesses of the prior system.",
+          "In this scholarship program, I am applying $3,500 in grant funding towards deep learning research using the University of Florida's HiPerGator AI supercomputer under Professor Amelia Winger-Bearskin.",
         color: "#0021a5",
         range: "2023/4-2025/4",
       }
@@ -52,11 +52,11 @@ const years = [
     experiences: [
           {
             title: "University of Florida",
-            position: "BSc in Computer Science",
+            position: "BSc in Computer Science; Minor in Statistics",
             months: "Jul '22 - May '26",
-            image: ai_scholars,
+            image: uf,
             caption:
-              "During my time at Gaming Analytics, I trained custom transformer-based NER models on a synthetic dataset I generated. These models served as the backbone for a text-to-graph-query pipeline that I created to address weaknesses of the prior system.",
+              "I'm currently pursuing a major in Computer Science through the <a href='https://www.eng.ufl.edu/'>Herbert Wertheim College of Engineering</a>. I'm also pursuing a minor in statistics. Some of my relevant coursework includes Operating Systems, Data Structures and Algorithms, and Algorithm Abstraction and Design.",
             color: "#fa4616",
             range: "2022/7-2026/5",
           }
@@ -71,7 +71,7 @@ const years = [
             months: "Dec '21 - Jul '22",
             image: pilot_media,
             caption:
-              "During my time at Gaming Analytics, I trained custom transformer-based NER models on a synthetic dataset I generated. These models served as the backbone for a text-to-graph-query pipeline that I created to address weaknesses of the prior system.",
+              "While working at Pilot Media AI, I collaborated in creating an AWS pipeline for extracting data from PDF documents using custom machine learning models and AWS services including S3, Lambda, SQS, SNS, and Textract.",
             color: "#00a99d",
             range: "2021/12-2022/7",
           }
@@ -83,8 +83,8 @@ function Experience() {
   const [color, setColor] = React.useState("black")
   const [range, setRange] = React.useState("")
 
-  function handleRangeChange() {
-    if (range == "") {
+  const handleRangeChange = React.useCallback(() => {
+    if (range === "") {
       // Reset values
       for (let year = 2019; year <= 2024; year++) {
         let bar = document.getElementById("bar-" + year.toString())
@@ -112,7 +112,7 @@ function Experience() {
     const m2 = parseInt(date[1])
 
     // Set only one year
-    if (y1 == y2) {
+    if (y1 === y2) {
       let bar = document.getElementById("bar-" + y1.toString())
       if(bar != null) {
           bar.style.backgroundColor = color
@@ -120,7 +120,7 @@ function Experience() {
           bar.style.top = Math.max((100 * (11 - m2)) / 11, 0).toString() + "%"
           bar.style.boxShadow = `0px 0px 5px ${color}B3`
     
-          if (m1 == 12 || m2 == 12) {
+          if (m1 === 12 || m2 === 12) {
             let dot = document.getElementById("dot-" + y1.toString())
             dot.style.backgroundColor = color
             dot.style.boxShadow = `0px 0px 5px ${color}B3`
@@ -168,18 +168,28 @@ function Experience() {
         bar.style.boxShadow = `0px 0px 5px ${color}B3`
     }
 
-    if (m2 == 12) {
+    if (m2 === 12) {
         let dot = document.getElementById("dot-" + y2.toString())
         if(dot != null) {
             dot.style.backgroundColor = color
             dot.style.boxShadow = `0px 0px 5px ${color}B3`
         }
     }
-  }
+  }, [color, range])
+
+
+  React.useEffect(() => {
+    // Reset range on scroll to avoid bug with displaying multiple timeranges at once
+    window.addEventListener("scroll", () => setRange(""))
+
+    return (
+      window.removeEventListener("scroll", () => setRange(""))
+    )
+  }, [])
 
   React.useEffect(() => {
     handleRangeChange()
-  }, [range])
+  }, [range, handleRangeChange])
 
   return (
     <div>
@@ -212,6 +222,7 @@ function Experience() {
                   return (
                     <div
                       key={experience.range}
+                      role="presentation"
                       onMouseEnter={() => {
                         setRange(experience.range)
                         setColor(experience.color)
@@ -247,7 +258,9 @@ function Experience() {
                           </div>
                         </div>
                       </div>
-                      <p>{experience.caption}</p>
+                      <p
+                  dangerouslySetInnerHTML={{ __html: experience.caption }}
+                ></p>
                     </div>
                   )
                 })}

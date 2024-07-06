@@ -5,6 +5,7 @@ import * as React from "react"
 import Layout from "../components/layout"
 import Hero from "../components/hero"
 import Experience from "../components/experience"
+import Projects from "../components/projects"
 import Seo from "../components/seo"
 
 const IndexPage = () => (
@@ -19,6 +20,8 @@ const IndexPage = () => (
         <Experience />
 
         <div className="h-0.5 w-full bg-gray-500 my-16"></div>
+
+        <Projects />
       </div>
     </div>
   </Layout>
@@ -32,15 +35,3 @@ const IndexPage = () => (
 export const Head = () => <Seo title="Home" />
 
 export default IndexPage
-
-{
-  /* <StaticImage
-src="../images/example.png"
-loading="eager"
-width={64}
-quality={95}
-formats={["auto", "webp", "avif"]}
-alt=""
-style={{ marginBottom: `var(--space-3)` }}
-/> */
-}
