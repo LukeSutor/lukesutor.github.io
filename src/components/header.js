@@ -8,7 +8,9 @@ const Header = ({ siteTitle }) => (
       <div className="flex flex-row items-center space-x-6">
         <Link to="/#experience">Experience</Link>
         <Link to="/#projects">Projects</Link>
-        <Link to="/resume" rel="noreferrer" target="_blank">Resume</Link>
+        <Link to="/resume" rel="noreferrer" target="_blank">
+          Resume
+        </Link>
       </div>
     </div>
   </header>

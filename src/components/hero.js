@@ -8,25 +8,25 @@ import resume from "../images/resume.png"
 
 const links = [
   {
-    "image": github,
-    "href": "https://github.com/LukeSutor",
-    "alt": "GitHub"
+    image: github,
+    href: "https://github.com/LukeSutor",
+    alt: "GitHub",
   },
   {
-    "image": linkedin,
-    "href": "https://www.linkedin.com/in/luke-sutor/",
-    "alt": "LinkedIn"
+    image: linkedin,
+    href: "https://www.linkedin.com/in/luke-sutor/",
+    alt: "LinkedIn",
   },
   {
-      "image": mail,
-      "href": "mailto:lukesutor@gmail.com",
-      "alt": "Email"
+    image: mail,
+    href: "mailto:lukesutor@gmail.com",
+    alt: "Email",
   },
   {
-    "image": resume,
-    "href": "/resume",
-    "alt": "Resume"
-  }
+    image: resume,
+    href: "/resume",
+    alt: "Resume",
+  },
 ]
 
 const Hero = ({}) => (
@@ -38,12 +38,12 @@ const Hero = ({}) => (
         Florida 🐊
       </p>
       <div className="flex flex-row space-x-4">
-        {links.map((link) => {
+        {links.map(link => {
           return (
             <a href={link.href} rel="noreferrer" target="_blank">
               <img className="h-12" src={link.image} alt={link.alt} />
             </a>
-          );
+          )
         })}
       </div>
     </div>
