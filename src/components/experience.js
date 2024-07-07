@@ -16,8 +16,7 @@ const years = [
         position: "Software Engineer Intern (Data Science)",
         months: "Mar '24 - Aug '24",
         image: gaming_analytics,
-        caption:
-          "During my time at Gaming Analytics, I trained custom transformer-based NER models on a synthetic dataset I generated. These models served as the backbone for a text-to-graph-query pipeline that I created to address weaknesses of the prior system.",
+        caption: "During my internship at Gaming Analytics, I trained custom transformer-based NER models using HuggingFace. These models served as the backbone for the text-to-graph-query pipeline that I created to address weaknesses of the prior system. I deployed this system to production using AWS services including SageMaker, Lambda, and S3.",
         color: "#1cbcff",
         range: "2024/5-2024/8",
       }
@@ -31,17 +30,17 @@ const years = [
         position: "Software Engineer Intern",
         months: "Jun '23 - Aug '23",
         image: william_ryan,
-        caption: "At William Ryan Group, I created a realtime data visualization interface using python, VBA, and excel spreadsheets. This enabled casino managers with real-time data insights which they could filter by customer tier levels, dates, and employee response times, allowing for data-driven decision making.",
+        caption: "At William Ryan Group, I created a realtime data visualization interface using Python, VBA, and excel spreadsheets. This dashboard provided casino managers with instant data insights which they could filter by parameters such as customer tier levels and employee response times, allowing for data-driven decision making.",
         color: "#073e6f",
         range: "2023/6-2023/8",
       },
       {
         title: "Artificial Intelligence Scholars Program",
         position: "Undergraduate Researcher",
-        months: "Jun '23 - Apr '25",
+        months: "Jun '23 - Present", // Apr '25'
         image: ai_scholars,
         caption:
-          "In this scholarship program, I am applying $3,500 in grant funding towards deep learning research using the University of Florida's HiPerGator AI supercomputer under Professor Amelia Winger-Bearskin.",
+          "I am a two-time recipient of this award, working under the mentorship of Professor Amelia Winger-Bearskin. With my $3,500 in grant funding, I am focusing on deep learning research utilizing the University's HiPerGator AI supercomputer.",
         color: "#0021a5",
         range: "2023/4-2025/4",
       }
@@ -53,10 +52,10 @@ const years = [
           {
             title: "University of Florida",
             position: "BSc in Computer Science; Minor in Statistics",
-            months: "Jul '22 - May '26",
+            months: "Jul '22 - Present", // May '26"
             image: uf,
             caption:
-              "I'm currently pursuing a major in Computer Science through the <a href='https://www.eng.ufl.edu/'>Herbert Wertheim College of Engineering</a>. I'm also pursuing a minor in statistics. Some of my relevant coursework includes Operating Systems, Data Structures and Algorithms, and Algorithm Abstraction and Design.",
+              "I'm currently enrolled in the <a href='https://www.eng.ufl.edu/'>Herbert Wertheim College of Engineering</a> pursuing a major in Computer Science with a minor in Statistics. Some of my relevant coursework includes Operating Systems, Data Structures and Algorithms, and Algorithm Abstraction and Design.",
             color: "#fa4616",
             range: "2022/7-2026/5",
           }
@@ -71,7 +70,7 @@ const years = [
             months: "Dec '21 - Jul '22",
             image: pilot_media,
             caption:
-              "While working at Pilot Media AI, I collaborated in creating an AWS pipeline for extracting data from PDF documents using custom machine learning models and AWS services including S3, Lambda, SQS, SNS, and Textract.",
+              "While working at Pilot Media AI, I collaborated to create a workflow for extracting data from PDF documents using custom machine learning models and AWS services including S3, Lambda, SQS, SNS, and Textract.",
             color: "#00a99d",
             range: "2021/12-2022/7",
           }
