@@ -40,7 +40,7 @@ const Hero = ({}) => (
       <div className="flex flex-row space-x-4">
         {links.map(link => {
           return (
-            <a href={link.href} rel="noreferrer" target="_blank">
+            <a key={link.href} href={link.href} rel="noreferrer" target="_blank">
               <img className="h-12" src={link.image} alt={link.alt} />
             </a>
           )

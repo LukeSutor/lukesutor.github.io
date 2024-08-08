@@ -9,16 +9,20 @@ import uf from "../images/uf.png"
 
 const years = [2025, 2024, 2023, 2022, 2021]
 
+const date = new Date();
+const month = date.getMonth() + 1;
+const year = date.getFullYear();
+
 const experiences = [
   {
     title: "Gaming Analytics Inc.",
     position: "Software Engineer Intern (Data Science)",
-    months: "Mar '24 - Aug '24",
+    months: "May '24 - Present",
     image: gaming_analytics,
     caption:
       "During my internship at Gaming Analytics, I trained custom transformer-based NER models using HuggingFace. These models served as the backbone for the text-to-graph-query pipeline that I created to address weaknesses of the prior system. I deployed this system to production using AWS services including SageMaker, Lambda, and S3.",
     color: "#1cbcff",
-    range: "2024/5-2024/8",
+    range: `2024/5-${year}/${month}`,
   },
   {
     title: "William Ryan Group",
@@ -33,7 +37,7 @@ const experiences = [
   {
     title: "Artificial Intelligence Scholars Program",
     position: "Undergraduate Researcher",
-    months: "Jun '23 - Present", // Apr '25'
+    months: "Jun '23 - Apr '25", // Apr '25'
     image: ai_scholars,
     caption:
       "I am a two-time recipient of this award, working under the mentorship of Professor Amelia Winger-Bearskin. With my $3,500 in grant funding, I am focusing on deep learning research utilizing the University's HiPerGator AI supercomputer.",
@@ -43,7 +47,7 @@ const experiences = [
   {
     title: "University of Florida",
     position: "BSc in Computer Science; Minor in Statistics",
-    months: "Jul '22 - Present", // May '26"
+    months: "Jul '22 - May '26", // May '26"
     image: uf,
     caption:
       "I'm currently enrolled in the <a href='https://www.eng.ufl.edu/'>Herbert Wertheim College of Engineering</a> pursuing a major in Computer Science with a minor in Statistics. Some of my relevant coursework includes Operating Systems, Data Structures and Algorithms, and Algorithm Abstraction and Design.",
@@ -193,7 +197,7 @@ function Experience() {
                       <div className="relative h-full w-0.5 bg-gray-500">
                         <div
                           id={`bar-${year}`}
-                          className="absolute top-0 bottom-0 w-full bg-transparent"
+                          className="absolute top-0 bottom-0 w-full bg-transparent transition-all duration-200 ease-in-out"
                         />
                       </div>
                     )}
@@ -221,7 +225,7 @@ function Experience() {
                 style={{
                   borderColor: experience.color,
                 }}
-                className="w-full border rounded-xl py-2 px-4 mb-8 shadow"
+                className="w-full border rounded-xl py-2 px-4 mb-8 hover:scale-[100.5%] transition-all duration-200 ease-in-out"
               >
                 <div className="flex flex-row justify-between items-center mb-2">
                   <div className="flex flex-row items-center w-full">
