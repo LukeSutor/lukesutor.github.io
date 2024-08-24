@@ -22,10 +22,8 @@ const Layout = ({ children }) => {
         // }}
       >
         <main>{children}</main>
-        <footer className="flex flex-row justify-between mx-16 mt-24">
-          <p>Resume</p>
-          <p>Contact</p>
-          <p>{new Date().getFullYear()} &middot; Built by Luke Sutor</p>
+        <footer className="mt-24">
+          <p className="ml-auto mr-4 w-min whitespace-nowrap">{new Date().getFullYear()} &middot; Built by Luke Sutor</p>
         </footer>
       </div>
     </>

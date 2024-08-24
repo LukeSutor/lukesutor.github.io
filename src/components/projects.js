@@ -11,7 +11,7 @@ const projects = [
     image: latent_docs,
     description: "Coming soon... Use LLMs to interact with Python library documentation, generating the most up-to-date code.",
     technologies: ["AWS", "React", "Large Language Models"],
-    href: ""
+    href: "/#projects"
   },
   {
     title: "Semantic Search",
@@ -25,7 +25,7 @@ const projects = [
     image: programmatic_pitch,
     description: "Research into using diffusion models for generating mel spectrograms. Presented at the University of Florida's 2024 Undergraduate Research Symposium.",
     technologies: ["Python", "PyTorch", "🤗 Accelerate"],
-    href: ""
+    href: "https://github.com/LukeSutor/programmatic-pitch"
   },
 ]
 
@@ -37,7 +37,7 @@ const Projects = () => (
     <div className="grid grid-cols-3 gap-x-8">
       {projects.map((project) => {
         return (
-          <div key={project.title} className="flex flex-col w-full border border-gray-300 hover:border-gray-500 hover:scale-[100.5%] rounded-xl mb-8 overflow-hidden transition-all duration-200 ease-in-out">
+          <a key={project.title} href={project.href} rel="noreferrer" target="_blank" className="flex flex-col w-full border border-gray-300 hover:border-gray-500 hover:scale-[100.5%] rounded-xl mb-8 overflow-hidden transition-all duration-200 ease-in-out">
             <img src={project.image} alt={project.alt} className="object-cover w-full h-56" />
             <div className="px-4 py-4 border-t border-gray-300">
               <p className="font-semibold text-2xl">{project.title}</p>
@@ -50,7 +50,7 @@ const Projects = () => (
               </div>
               <p>{project.description}</p>
             </div>
-          </div>
+          </a>
         )
       })}
     </div>

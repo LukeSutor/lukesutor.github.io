@@ -29,8 +29,8 @@ const links = [
   },
 ]
 
-const Hero = ({}) => (
-  <div className="flex flex-row justify-between m-0">
+const Hero = () => (
+  <div className="flex flex-row justify-between m-0 space-x-16">
     <div className="flex flex-col space-y-4 my-auto">
       <h1 className="text-5xl font-bold">Hello, I'm Luke Sutor</h1>
       <p className="text-xl mb-4">
@@ -40,8 +40,8 @@ const Hero = ({}) => (
       <div className="flex flex-row space-x-4">
         {links.map(link => {
           return (
-            <a key={link.href} href={link.href} rel="noreferrer" target="_blank">
-              <img className="h-12" src={link.image} alt={link.alt} />
+            <a key={link.href} href={link.href} rel="noreferrer" target="_blank" className="hover:scale-[100.5%] transition-all duration-200 ease-in-ou">
+              <img className="h-12 hover:scale-[105%] transition-all duration-200 ease-in-out" src={link.image} alt={link.alt} />
             </a>
           )
         })}

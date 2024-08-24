@@ -71,24 +71,27 @@ function Experience() {
   const [range, setRange] = React.useState("")
 
   const handleRangeChange = React.useCallback(() => {
-    if (range === "") {
-      // Reset values
-      for (const year of years) {
-        let bar = document.getElementById("bar-" + year.toString())
-        if (bar != null) {
-          bar.style.backgroundColor = "transparent"
-          bar.style.top = 0
-          bar.style.bottom = 0
-          bar.style.boxShadow = `0px 0px 0px 0`
-        }
-        let dot = document.getElementById("dot-" + year.toString())
-        if (dot != null) {
-          dot.style.backgroundColor = "rgb(107 114 128)"
-          dot.style.boxShadow = `0px 0px 0px 0`
-        }
+    // Reset values at first
+    for (const year of years) {
+      let bar = document.getElementById("bar-" + year.toString())
+      if (bar != null) {
+        bar.style.backgroundColor = "transparent"
+        bar.style.top = 0
+        bar.style.bottom = 0
+        bar.style.boxShadow = `0px 0px 0px 0`
       }
+      let dot = document.getElementById("dot-" + year.toString())
+      if (dot != null) {
+        dot.style.backgroundColor = "rgb(107 114 128)"
+        dot.style.boxShadow = `0px 0px 0px 0`
+      }
+    }
+
+    // If no actual range simply return after resetting
+    if (range === "") {
       return
     }
+
 
     // Extract time from range
     let dates = range.split("-")
