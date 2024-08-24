@@ -2,23 +2,28 @@ import * as React from "react"
 
 // Import images
 import semantic_search from "../images/semantic_search.png"
+import doc_whisperer from "../images/doc_whisperer.png"
 
 const projects = [
+  {
+    title: "Doc Whisperer",
+    image: doc_whisperer,
+    description: "Coming soon... Use LLMs to interact with Python library documentation, generating the most up-to-date code.",
+    technologies: ["AWS", "React", "Large Language Models"],
+    href: ""
+  },
   {
     title: "Semantic Search",
     image: semantic_search,
     description: "A Chrome extension with ~200 users for semantically retrieving information from webpages.",
-    technologies: ["JavaScript", "GPT-3.5", "Chrome Extension"]
+    technologies: ["JavaScript", "GPT-3.5", "Chrome Extension"],
+    href: "https://chromewebstore.google.com/detail/semantic-search/moknadjgghaffcedafbafjfjgnaanalm?hl=en-US"
   },
   {
     title: "Programmatic Pitch",
-    description: "",
-    technologies: ["Python", "PyTorch", "🤗 Accelerate"]
-  },
-  {
-    title: "Semantic Search Extension",
-    description: "",
-    technologies: ["GPT-3.5, Chrome Extension"]
+    description: "Research into using diffusion models for generating mel spectrograms. Presented at the University of Florida's 2024 Undergraduate Research Symposium.",
+    technologies: ["Python", "PyTorch", "🤗 Accelerate"],
+    href: ""
   },
 ]
 
@@ -34,10 +39,10 @@ const Projects = () => (
             <img src={project.image} alt={project.alt} className="object-cover w-full h-56" />
             <div className="px-4 py-4 border-t border-gray-300">
               <p className="font-semibold text-2xl">{project.title}</p>
-              <div className="flex flex-row flex-wrap my-4">
+              <div className="flex flex-row flex-wrap mt-4">
                 {project.technologies.map((technology) => {
                   return (
-                    <p key={technology} className="text-sm font-bold whitespace-nowrap px-2 py-1 mr-2 bg-gray-200 rounded-lg border border-gray-300">{technology}</p>
+                    <p key={technology} className="text-sm font-bold whitespace-nowrap px-2 py-1 mr-2 mb-2 bg-gray-200 rounded-lg border border-gray-300">{technology}</p>
                   )
                 })}
               </div>

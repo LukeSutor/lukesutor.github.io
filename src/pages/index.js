@@ -10,7 +10,7 @@ import Seo from "../components/seo"
 
 const IndexPage = () => (
   <Layout>
-    <div className="flex justify-center items-center w-full px-16">
+    <div className="flex justify-center items-center w-full px-16 scroll-smooth">
       <div className="w-full max-w-screen-xl">
         <div className="h-24" />
         <Hero />

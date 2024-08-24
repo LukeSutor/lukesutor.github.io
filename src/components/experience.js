@@ -20,7 +20,7 @@ const experiences = [
     months: "May '24 - Present",
     image: gaming_analytics,
     caption:
-      "During my internship at Gaming Analytics, I trained custom transformer-based NER models using HuggingFace. These models served as the backbone for the text-to-graph-query pipeline that I created to address weaknesses of the prior system. I deployed this system to production using AWS services including SageMaker, Lambda, and S3.",
+      "As I intern at <a style='text-decoration: underline; font-weight: 500' href='https://gaminganalytics.ai/'>Gaming Analytics</a>, I'm training NER models through HuggingFace to improve the NLP service. These models served as the backbone for the text-to-graph-query pipeline that I created to address weaknesses of the prior system. I deployed this system to production using AWS services including SageMaker, Lambda, and S3.",
     color: "#1cbcff",
     range: `2024/5-${year}/${month}`,
   },
@@ -40,7 +40,7 @@ const experiences = [
     months: "Jun '23 - Apr '25", // Apr '25'
     image: ai_scholars,
     caption:
-      "I am a two-time recipient of this award, working under the mentorship of Professor Amelia Winger-Bearskin. With my $3,500 in grant funding, I am focusing on deep learning research utilizing the University's HiPerGator AI supercomputer.",
+      "I am a two-time recipient of this award, working under the mentorship of Professor Amelia Winger-Bearskin. With my $3,500 in grant funding, I am focusing on deep learning research utilizing the University's <a style='text-decoration: underline; font-weight: 500' href='https://www.rc.ufl.edu/about/hipergator/'>HiPerGator AI</a> supercomputer.",
     color: "#0021a5",
     range: "2023/4-2025/4",
   },
@@ -50,7 +50,7 @@ const experiences = [
     months: "Jul '22 - May '26", // May '26"
     image: uf,
     caption:
-      "I'm currently enrolled in the <a href='https://www.eng.ufl.edu/'>Herbert Wertheim College of Engineering</a> pursuing a major in Computer Science with a minor in Statistics. Some of my relevant coursework includes Operating Systems, Data Structures and Algorithms, and Algorithm Abstraction and Design.",
+      "I'm currently enrolled in the <a style='text-decoration: underline; font-weight: 500' href='https://www.eng.ufl.edu/'>Herbert Wertheim College of Engineering</a> pursuing a major in Computer Science with a minor in Statistics. Some of my relevant coursework includes Operating Systems, Data Structures and Algorithms, and Algorithm Abstraction and Design.",
     color: "#fa4616",
     range: "2022/7-2026/5",
   },
@@ -197,7 +197,7 @@ function Experience() {
                       <div className="relative h-full w-0.5 bg-gray-500">
                         <div
                           id={`bar-${year}`}
-                          className="absolute top-0 bottom-0 w-full bg-transparent transition-all duration-200 ease-in-out"
+                          className="absolute top-0 bottom-0 -left-[1px] -right-[1px] rounded-full bg-transparent transition-all duration-200 ease-in-out"
                         />
                       </div>
                     )}
