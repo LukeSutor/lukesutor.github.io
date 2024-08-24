@@ -1,13 +1,14 @@
 import * as React from "react"
 
 // Import images
+import latent_docs from "../images/latent_docs.png"
 import semantic_search from "../images/semantic_search.png"
-import doc_whisperer from "../images/doc_whisperer.png"
+import programmatic_pitch from "../images/programmatic_pitch.png"
 
 const projects = [
   {
-    title: "Doc Whisperer",
-    image: doc_whisperer,
+    title: "Latent Docs",
+    image: latent_docs,
     description: "Coming soon... Use LLMs to interact with Python library documentation, generating the most up-to-date code.",
     technologies: ["AWS", "React", "Large Language Models"],
     href: ""
@@ -16,11 +17,12 @@ const projects = [
     title: "Semantic Search",
     image: semantic_search,
     description: "A Chrome extension with ~200 users for semantically retrieving information from webpages.",
-    technologies: ["JavaScript", "GPT-3.5", "Chrome Extension"],
+    technologies: ["JavaScript", "GPT-3.5", "Cloudflare Workers"],
     href: "https://chromewebstore.google.com/detail/semantic-search/moknadjgghaffcedafbafjfjgnaanalm?hl=en-US"
   },
   {
     title: "Programmatic Pitch",
+    image: programmatic_pitch,
     description: "Research into using diffusion models for generating mel spectrograms. Presented at the University of Florida's 2024 Undergraduate Research Symposium.",
     technologies: ["Python", "PyTorch", "🤗 Accelerate"],
     href: ""

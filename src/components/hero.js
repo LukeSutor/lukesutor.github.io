@@ -34,7 +34,7 @@ const Hero = ({}) => (
     <div className="flex flex-col space-y-4 my-auto">
       <h1 className="text-5xl font-bold">Hello, I'm Luke Sutor</h1>
       <p className="text-xl mb-4">
-        I'm a rising Junior studying Computer Science at the University of
+        I'm a third year Computer Science student at the University of
         Florida 🐊
       </p>
       <div className="flex flex-row space-x-4">

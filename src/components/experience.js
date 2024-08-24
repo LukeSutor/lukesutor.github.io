@@ -20,7 +20,7 @@ const experiences = [
     months: "May '24 - Present",
     image: gaming_analytics,
     caption:
-      "As I intern at <a style='text-decoration: underline; font-weight: 500' href='https://gaminganalytics.ai/'>Gaming Analytics</a>, I'm training NER models through HuggingFace to improve the NLP service. These models served as the backbone for the text-to-graph-query pipeline that I created to address weaknesses of the prior system. I deployed this system to production using AWS services including SageMaker, Lambda, and S3.",
+      "As I intern at <a style='text-decoration: underline; font-weight: 500' href='https://gaminganalytics.ai/'>Gaming Analytics</a>, I'm training NER models through HuggingFace to improve the internal NLP system. These models are serving as the backbone for the text-to-database-query pipeline that I'm improving. I'm currently working on deploying this system to production using AWS services including SageMaker, Lambda, and S3.",
     color: "#1cbcff",
     range: `2024/5-${year}/${month}`,
   },
