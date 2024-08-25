@@ -181,11 +181,11 @@ function Experience() {
 
   return (
     <div>
-      <h1 id="experience" className="text-5xl font-bold mb-12">
+      <h1 id="experience" className="text-3xl lg:text-5xl font-bold mb-12">
         Experience
       </h1>
       <div className="relative flex flex-row mx-auto w-full max-w-5xl h-full">
-        <div className="sticky top-[calc(50vh-30%)] flex flex-col max-h-[60vh]">
+        <div className="hidden lg:flex sticky top-[calc(50vh-30%)] flex-col max-h-[60vh]">
           {years.map(year => {
             var isFirst = year === years[0]
             return (
@@ -233,7 +233,7 @@ function Experience() {
                 <div className="flex flex-row justify-between items-center mb-2">
                   <div className="flex flex-row items-center w-full">
                     <img
-                      className="rounded-lg h-20 mr-4"
+                      className="rounded-lg h-16 lg:h-20 max-w-20 lg:max-w-96 mr-4 object-contain"
                       src={experience.image}
                       loading="lazy"
                       quality={95}
@@ -242,18 +242,18 @@ function Experience() {
                     />
                     <div className="flex flex-col w-full">
                       <div className="flex flex-row justify-between">
-                        <h2 className="text-xl font-bold">
+                        <h2 className="text-base lg:text-xl font-bold">
                           {experience.title}
                         </h2>
-                        <p className="my-auto text-right">
+                        <p className="text-sm lg:text-base my-auto text-right">
                           {experience.months}
                         </p>
                       </div>
-                      <p className="text-gray-700">{experience.position}</p>
+                      <p className="text-sm lg:text-base text-gray-700">{experience.position}</p>
                     </div>
                   </div>
                 </div>
-                <p dangerouslySetInnerHTML={{ __html: experience.caption }}></p>
+                <p className="text-sm lg:text-base" dangerouslySetInnerHTML={{ __html: experience.caption }}></p>
               </div>
             )
           })}

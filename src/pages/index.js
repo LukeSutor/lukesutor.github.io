@@ -8,16 +8,16 @@ import Seo from "../components/seo"
 
 const IndexPage = () => (
   <Layout>
-    <div className="flex justify-center items-center w-full px-16">
+    <div className="flex justify-center items-center w-full px-10 lg:px-16">
       <div className="w-full max-w-screen-xl scroll-smooth">
-        <div className="h-24" />
+        <div className="h-12 lg:h-24" />
         <Hero />
 
-        <div className="h-0.5 w-full bg-gray-500 my-16"></div>
+        <div className="h-0.5 w-full bg-gray-500 my-10 lg:my-16"></div>
 
         <Experience />
 
-        <div className="h-0.5 w-full bg-gray-500 my-16"></div>
+        <div className="h-0.5 w-full bg-gray-500 my-10 lg:my-16"></div>
 
         <Projects />
       </div>
