@@ -20,7 +20,7 @@ const experiences = [
     months: "May '24 - Present",
     image: gaming_analytics,
     caption:
-      "As I intern at <a style='text-decoration: underline; font-weight: 500' href='https://gaminganalytics.ai/'>Gaming Analytics</a>, I'm training NER models through HuggingFace to improve the internal NLP system. These models are serving as the backbone for the text-to-database-query pipeline that I'm improving. I'm currently working on deploying this system to production using AWS services including SageMaker, Lambda, and S3.",
+      "I'm currently a Data Scientist Intern at <a style='text-decoration: underline; font-weight: 500' href='https://gaminganalytics.ai/'>Gaming Analytics</a>, where I specialize in enhancing the natural language processing capabilities within the company's internal systems. My work primarily involves training Named Entity Recognition (NER) models using HuggingFace to improve the efficiency and accuracy of our text-to-database-query pipeline. This enables casino managers with no technical background to effortlessly query data by asking questions like, \"Show me the number of jackpots this month vs last month\", and receive instant, precise insights. I'm also contributing to the deployment of this system into production, leveraging AWS services like SageMaker, Lambda, and S3 to ensure scalability and reliability.",
     color: "#1cbcff",
     range: `2024/5-${year}/${month}`,
   },
@@ -40,7 +40,7 @@ const experiences = [
     months: "Jun '23 - Apr '25", // Apr '25'
     image: ai_scholars,
     caption:
-      "I am a two-time recipient of this award, working under the mentorship of Professor Amelia Winger-Bearskin. With my $3,500 in grant funding, I am focusing on deep learning research utilizing the University's <a style='text-decoration: underline; font-weight: 500' href='https://www.rc.ufl.edu/about/hipergator/'>HiPerGator AI</a> supercomputer.",
+      "I am a two-time recipient of this award, working under the mentorship of Professor Amelia Winger-Bearskin. With my $3,500 in grant funding, I am focusing on deep learning research utilizing the University's <a style='text-decoration: underline; font-weight: 500' href='https://www.rc.ufl.edu/about/hipergator/'>HiPerGator AI</a> supercomputer. In the Spring of 2024, I presented my research into diffusion models for audio synthesis at the University's 2024 Undergraduate Research Symposium",
     color: "#0021a5",
     range: "2023/4-2025/4",
   },
@@ -50,7 +50,7 @@ const experiences = [
     months: "Jul '22 - May '26", // May '26"
     image: uf,
     caption:
-      "I'm currently enrolled in the <a style='text-decoration: underline; font-weight: 500' href='https://www.eng.ufl.edu/'>Herbert Wertheim College of Engineering</a> pursuing a major in Computer Science with a minor in Statistics. Some of my relevant coursework includes Operating Systems, Data Structures and Algorithms, and Algorithm Abstraction and Design.",
+      "I'm currently enrolled in the <a style='text-decoration: underline; font-weight: 500' href='https://www.eng.ufl.edu/'>Herbert Wertheim College of Engineering</a> pursuing a major in Computer Science with a minor in Statistics. Some of my relevant coursework includes Operating Systems, Data Structures and Algorithms, Algorithm Abstraction and Design, and Natural Language Processing.",
     color: "#fa4616",
     range: "2022/7-2026/5",
   },
