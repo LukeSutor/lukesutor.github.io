@@ -9,9 +9,9 @@ import uf from "../images/uf.png"
 
 const years = [2025, 2024, 2023, 2022, 2021]
 
-const date = new Date();
-const month = date.getMonth() + 1;
-const year = date.getFullYear();
+const date = new Date()
+const month = date.getMonth() + 1
+const year = date.getFullYear()
 
 const experiences = [
   {
@@ -91,7 +91,6 @@ function Experience() {
     if (range === "") {
       return
     }
-
 
     // Extract time from range
     let dates = range.split("-")
@@ -249,11 +248,16 @@ function Experience() {
                           {experience.months}
                         </p>
                       </div>
-                      <p className="text-sm lg:text-base text-gray-700">{experience.position}</p>
+                      <p className="text-sm lg:text-base text-gray-700">
+                        {experience.position}
+                      </p>
                     </div>
                   </div>
                 </div>
-                <p className="text-sm lg:text-base" dangerouslySetInnerHTML={{ __html: experience.caption }}></p>
+                <p
+                  className="text-sm lg:text-base"
+                  dangerouslySetInnerHTML={{ __html: experience.caption }}
+                ></p>
               </div>
             )
           })}

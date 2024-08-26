@@ -13,12 +13,12 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={"Luke Sutor"} />
-      <div
-        className="m-0"
-      >
+      <div className="m-0">
         <main>{children}</main>
         <footer className="mt-24">
-          <p className="text-sm lg:text-base ml-auto mr-8 lg:mr-4 w-min whitespace-nowrap">{new Date().getFullYear()} &middot; Built by Luke Sutor</p>
+          <p className="text-sm lg:text-base ml-auto mr-8 lg:mr-4 w-min whitespace-nowrap">
+            {new Date().getFullYear()} &middot; Built by Luke Sutor
+          </p>
         </footer>
       </div>
     </>

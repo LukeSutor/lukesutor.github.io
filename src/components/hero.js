@@ -34,14 +34,23 @@ const Hero = () => (
     <div className="flex flex-col space-y-4 my-auto text-center lg:text-left">
       <h1 className="text-3xl lg:text-5xl font-bold">Hello, I'm Luke Sutor</h1>
       <p className="text-xl mb-4">
-        I'm a third year Computer Science student at the University of
-        Florida 🐊
+        I'm a third year Computer Science student at the University of Florida
+        🐊
       </p>
       <div className="flex flex-row justify-center lg:justify-start space-x-4">
         {links.map(link => {
           return (
-            <a key={link.href} href={link.href} rel="noreferrer" target="_blank">
-              <img className="h-12 hover:scale-[105%] transition-all duration-200 ease-in-out" src={link.image} alt={link.alt} />
+            <a
+              key={link.href}
+              href={link.href}
+              rel="noreferrer"
+              target="_blank"
+            >
+              <img
+                className="h-12 hover:scale-[105%] transition-all duration-200 ease-in-out"
+                src={link.image}
+                alt={link.alt}
+              />
             </a>
           )
         })}
