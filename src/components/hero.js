@@ -34,7 +34,7 @@ const Hero = () => (
     <div className="flex flex-col space-y-4 my-auto text-center lg:text-left">
       <h1 className="text-3xl lg:text-5xl font-bold">Hello, I'm Luke Sutor</h1>
       <p className="text-xl mb-4">
-        I'm a third year Computer Science student at the University of Florida
+        I'm a third year computer science student at the University of Florida
         🐊
       </p>
       <div className="flex flex-row justify-center lg:justify-start space-x-4">

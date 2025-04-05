@@ -8,7 +8,7 @@ import ai_scholars from "../images/ai_scholars.jpg"
 import pilot_media from "../images/pilot_media.jpg"
 import uf from "../images/uf.png"
 
-const years = [2025, 2024, 2023, 2022, 2021]
+const years = [2026, 2025, 2024, 2023, 2022]
 
 const date = new Date()
 const month = date.getMonth() + 1
