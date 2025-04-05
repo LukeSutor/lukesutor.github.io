@@ -1,24 +1,25 @@
 import * as React from "react"
 
 // Import images
-import latent_docs from "../images/latent_docs.png"
+import computer_use from "../images/computer_use.png"
+// import latent_docs from "../images/latent_docs.png"
 import semantic_search from "../images/semantic_search.png"
 import programmatic_pitch from "../images/programmatic_pitch.png"
 
 const projects = [
   {
-    title: "Latent Docs",
-    image: latent_docs,
+    title: "Local Computer Use",
+    image: computer_use,
     description:
-      "Coming soon... Use LLMs to interact with Python library documentation, generating the most up-to-date code.",
-    technologies: ["AWS", "React", "Large Language Models"],
-    href: "/#projects",
+      "Let a locally-hosted LLM automate your tasks by taking control of your keyboard and mouse.",
+    technologies: ["Tauri", "Rust", "C++", "Large Language Models"],
+    href: "https://github.com/LukeSutor/local-computer-use",
   },
   {
     title: "Semantic Search",
     image: semantic_search,
     description:
-      "A Chrome extension with ~200 users for semantically retrieving information from webpages.",
+      "A Chrome extension with 250+ users for semantically retrieving information from webpages.",
     technologies: ["JavaScript", "GPT-3.5", "Cloudflare Workers"],
     href: "https://chromewebstore.google.com/detail/semantic-search/moknadjgghaffcedafbafjfjgnaanalm?hl=en-US",
   },

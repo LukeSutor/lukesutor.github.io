@@ -1,6 +1,7 @@
 import * as React from "react"
 
 // Images
+import mathworks from "../images/mathworks.jpg"
 import gaming_analytics from "../images/gaming_analytics.jpg"
 import william_ryan from "../images/william_ryan.jpg"
 import ai_scholars from "../images/ai_scholars.jpg"
@@ -15,14 +16,24 @@ const year = date.getFullYear()
 
 const experiences = [
   {
+    title: "MathWorks",
+    position: "Software Engineer Intern",
+    months: "May '25 - Present",
+    image: mathworks,
+    caption:
+      "I'm an incoming Software Engineer Intern at <a style='text-decoration: underline; font-weight: 500' href='https://www.mathworks.com/'>MathWorks</a>, where I'll be on the installations team as part of the Engineering Development Group.",
+    color: "#f58f45",
+    range: `2025/5-${year}/${month}`,
+  },
+  {
     title: "Gaming Analytics Inc.",
-    position: "Software Engineer Intern (Data Science)",
-    months: "May '24 - Present",
+    position: "Software Engineer Intern",
+    months: "May '24 - Mar '24",
     image: gaming_analytics,
     caption:
-      "I'm currently a Data Scientist Intern at <a style='text-decoration: underline; font-weight: 500' href='https://gaminganalytics.ai/'>Gaming Analytics</a>, where I specialize in enhancing the natural language processing capabilities within the company's internal systems. My work primarily involves training Named Entity Recognition (NER) models using HuggingFace to improve the efficiency and accuracy of our text-to-database-query pipeline. This enables casino managers with no technical background to effortlessly query data by asking questions like, \"Show me the number of jackpots this month vs last month\", and receive instant, precise insights. I'm also contributing to the deployment of this system into production, leveraging AWS services like SageMaker, Lambda, and S3 to ensure scalability and reliability.",
+      "Last summer, I was a Software Engineer Intern at <a style='text-decoration: underline; font-weight: 500' href='https://gaminganalytics.ai/'>Gaming Analytics</a>, where I enhanced the natural language processing capabilities of the company's plaintext-to-database-query pipeline. My work involved training Named Entity Recognition (NER) models using HuggingFace to improve the efficiency and accuracy of the system. This system enables casino managers with no technical background to effortlessly query data by asking questions like, \"Show me the number of jackpots this month vs last month,\" and receive instant, precise insights. I also contributed to the deployment of the system on AWS, leveraging services like SageMaker, Lambda, and S3 to ensure scalability and reliability.",
     color: "#1cbcff",
-    range: `2024/5-${year}/${month}`,
+    range: `2024/5-2025/3`,
   },
   {
     title: "William Ryan Group",
@@ -50,7 +61,7 @@ const experiences = [
     months: "Jul '22 - May '26", // May '26"
     image: uf,
     caption:
-      "I'm currently enrolled in the <a style='text-decoration: underline; font-weight: 500' href='https://www.eng.ufl.edu/'>Herbert Wertheim College of Engineering</a> pursuing a major in Computer Science with a minor in Statistics. Some of my relevant coursework includes Operating Systems, Data Structures and Algorithms, Algorithm Abstraction and Design, and Natural Language Processing.",
+      "I'm currently enrolled in the <a style='text-decoration: underline; font-weight: 500' href='https://www.eng.ufl.edu/'>Herbert Wertheim College of Engineering</a> pursuing a major in Computer Science and a minor in Statistics. Some of my relevant coursework includes Operating Systems, Data Structures and Algorithms, Algorithm Abstraction and Design, Database Systems, and Natural Language Processing.",
     color: "#fa4616",
     range: "2022/7-2026/5",
   },
